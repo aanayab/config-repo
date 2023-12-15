@@ -19,10 +19,10 @@ server:
 #    context-path: /ws-api-gateway
   port: '8096'
 spring:
-  application:
-    name: ws-api-gateway
-  profiles:
-    active: '@activatedProperties@'
+#  application:
+#    name: ws-api-gateway
+#  profiles:
+#    active: '@activatedProperties@'
   main:
     web-application-type: REACTIVE
 #  webflux:
