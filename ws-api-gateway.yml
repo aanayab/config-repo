@@ -1,1 +1,51 @@
-
+management:
+#  server:
+#    base-path: /actuator
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    info:
+      enabled: true
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+#      base-path: ${server.servlet.context-path}/actuator
+      exposure:
+        include: '*'
+server:
+#  servlet:
+#    context-path: /ws-api-gateway
+  port: '8096'
+spring:
+  application:
+    name: ws-api-gateway
+  profiles:
+    active: '@activatedProperties@'
+  main:
+    web-application-type: REACTIVE
+#  webflux:
+#    base-path: /ws-api-gateway
+  boot:
+    admin:
+      client:
+        instance:
+#          service-url: http://localhost:8096${server.servlet.context-path}
+          service-base-url: http://localhost:8096
+        url: http://localhost:8094/ws-admin-server
+        username: admin
+        password: '12345678'
+  cloud: 
+    gateway: 
+      routes: 
+        - id: my_route
+          uri: http://httpbin.org:80
+          predicates: 
+            - Path=/get/**
+          filters:
+            - AddRequestHeader=Hello,World
+#            - StripPrefix=1
+              
+logging:
+  config: classpath:logback-dev.xml
