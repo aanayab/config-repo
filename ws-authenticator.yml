@@ -31,12 +31,15 @@ spring:
  # application:
   #  name: ws-authenticator
   datasource:
-    password: o649fj9325yuhwx9
+  # password: o649fj9325yuhwx9
+    password: admin
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: y3wh6gobj769qsq7
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
+ #  username: y3wh6gobj769qsq7
+    username: root
+ #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
+    url: jdbc:mysql://$localhost:3306/authenticate
     hikari:
-      maximum-pool-size: 1
+      maximum-pool-size: 5
   jpa:
     hibernate:
       ddl-auto: update
