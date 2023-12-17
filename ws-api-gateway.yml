@@ -35,7 +35,7 @@ spring:
           service-base-url: http://localhost:${server.port}
         url: http://localhost:8094/ws-admin-server
         username: wsAdminServer
-        password: 'ws4dm1nS3rv3r*'
+        password: '$2a$12$FlwjMDDvRdjJ7v/ujmOHrujyjg.dYv7M/78bhqY31HBvoSAnFlaFe'
   cloud: 
     gateway: 
       routes: 
