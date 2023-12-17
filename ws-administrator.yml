@@ -26,8 +26,8 @@ spring:
         instance:
           service-base-url: http://localhost:${server.port}
         url: http://localhost:8094/ws-admin-server
-        username: admin
-        password: '12345678'
+        username: wsAdminServer
+        password: 'ws4dm1nS3rv3r*'
  # application:
   #  name: ws-authenticator
   datasource:
