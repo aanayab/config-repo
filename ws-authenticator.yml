@@ -9,16 +9,21 @@ server:
     context-path: /ws-authenticator
   port: '8083'
 management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  info:
-    env:
-      enabled: 'true'
+#  server:
+#    base-path: /actuator
   endpoint:
     health:
+      enabled: true
       show-details: always
+    info:
+      enabled: true
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+#      base-path: ${server.servlet.context-path}/actuator
+      exposure:
+        include: '*'
 spring:
   boot:
     admin:
