@@ -53,7 +53,7 @@ spring:
     openfeign:
       client:
         config:
-          authenticator:
+          wsAuthenticator:
             url: http://localhost:8083/ws-authenticator/
             username: wsAdministrator
             password: ws4dm1n1str4t0r*
