@@ -37,7 +37,7 @@ spring:
  #  username: y3wh6gobj769qsq7
     username: root
  #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
-    url: jdbc:mysql://localhost:3306/authentication
+    url: jdbc:mysql://localhost:3306/administrator
     hikari:
       maximum-pool-size: 5
   jpa:
