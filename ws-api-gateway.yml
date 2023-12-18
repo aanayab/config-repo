@@ -9,6 +9,12 @@ management:
       enabled: true
     shutdown:
       enabled: true
+    pause:
+      enabled: true
+    restart:
+      enabled: true
+    refresh:
+      enabled: true
   endpoints:
     web:
 #      base-path: ${server.servlet.context-path}/actuator
