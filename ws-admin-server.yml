@@ -18,21 +18,6 @@ spring:
     hibernate:
       ddl-auto: validate
     show-sql: 'true'
-#  boot:
-#    admin:
-#      client:
-#        instance:
-#          service-base-url: http://localhost:8094
-#        url: http://localhost:8094/ws-admin-server
-#        username: admin
-#        password: '12345678'
-#  boot:
-#    admin:
-#      notify:
-#        ms-teams:
-#          webhook-url: https://trupercorp.webhook.office.com/webhookb2/8762266d-244a-4771-84a4-9eead392645f@c348dbf4-bb92-4083-bfd8-de8b34c00f95/IncomingWebhook/d215eb9630c04c958d019cfb619a06a1/d1e38684-3a57-42e1-bfe5-643a7f29fc21
-#          enabled: 'true'
-    
 management:
   endpoints:
     web:
