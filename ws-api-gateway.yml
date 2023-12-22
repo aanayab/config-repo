@@ -52,6 +52,14 @@ spring:
           filters:
             - AddRequestHeader=Hello,World
 #            - StripPrefix=1
+      routes: 
+        - id: ws_authenticator_authenticate
+          uri: http://localhost:8083/ws-authenticator
+          predicates: 
+            - Path=/api/authenticate/**
+          filters:
+#            - AddRequestHeader=Hello,World
+#            - StripPrefix=1
               
 logging:
   config: classpath:logback-dev.xml
