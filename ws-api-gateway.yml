@@ -52,8 +52,8 @@ spring:
           filters:
             - AddRequestHeader=Hello,World
 #            - StripPrefix=1
-        - id: ws_authenticator_authenticate
-          uri: http://localhost:8083/ws-authenticator/api/authenticate/
+        - id: ws_authenticator
+          uri: http://localhost:8083/
           predicates: 
             - Path=/api/authenticate/**
           filters:
