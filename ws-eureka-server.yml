@@ -33,6 +33,8 @@ spring:
 eureka:
  instance:
    hostname: 'localhost'
+   statusPageUrlPath: ${server.servlet.context-path}/info
+   healthCheckUrlPath: ${server.servlet.context-path}/health
  client:
     registerWithEureka: false
     fetchRegistry: false
