@@ -71,7 +71,7 @@ eureka:
   instance:
     preferIpAddress: true
 info:
-  application:
+  app:
     name: ${spring.application.name}
     description: Very cool Spring Boot application
     version: '@project.version@'
