@@ -7,7 +7,7 @@ secret:
 server:
   servlet:
     context-path: /ws-authenticator
-  port: '0'
+  port: '8083'
 management:
 #  server:
 #    base-path: /actuator
