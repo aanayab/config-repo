@@ -17,8 +17,6 @@ management:
       show-details: always
     info:
       enabled: true
-      env:
-        enabled: true
     shutdown:
       enabled: true
     pause:
@@ -70,4 +68,11 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8761/ws-eureka-server/eureka}
   instance:
     preferIpAddress: true
+info:
+  application:
+    name: ${spring.application.name}
+    description: Very cool Spring Boot application
+    version: '@project.version@'
+    spring-cloud-version: '@spring-cloud.version@'
+    spring-boot-version: '@project.parent.version@'
   
