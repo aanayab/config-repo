@@ -32,7 +32,7 @@ management:
       show-details: always
 logging:
   config: classpath:logback-dev.xml  
-springdoc:
+#springdoc:
 #  swagger-ui:
 #    path: /swagger-ui.html
 #  api-docs:
