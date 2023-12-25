@@ -92,6 +92,6 @@ eureka:
     service-url: 
       defaultZone: http://${eureka.single-instance.host}:${eureka.single-instance.port}${eureka.context-path}/eureka
   instance:
-    statusPageUrlPath: ${server.servlet.context-path}${management.endpoints.web.base-path}/info
-    healthCheckUrlPath: ${server.servlet.context-path}${management.endpoints.web.base-path}/health
+    statusPageUrlPath: ${management.endpoints.web.base-path}/info
+    healthCheckUrlPath: ${management.endpoints.web.base-path}/health
     instanceId: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
