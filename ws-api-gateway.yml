@@ -29,7 +29,7 @@ management:
 #      base-path: ${server.servlet.context-path}/actuator
       exposure:
         include: '*'
-#server:
+server:
 #  servlet:
 #    context-path: /ws-api-gateway
   port: 8096
