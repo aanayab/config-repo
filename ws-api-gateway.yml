@@ -61,7 +61,7 @@ spring:
             - Method=POST
           filters:
 #            - AddRequestHeader=Hello,World
-            - StripPrefix=1
+#            - StripPrefix=1
               
 logging:
   config: classpath:logback-dev.xml
