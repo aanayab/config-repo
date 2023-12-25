@@ -62,7 +62,7 @@ spring:
             - AddRequestHeader=Hello,World
 #            - StripPrefix=1
         - id: ws-authenticator
-          uri: http://localhost:8083
+          uri: lb://WS-AUTHENTICATOR
           predicates: 
             - Path=/ws-authenticator/api/authenticate/**
             - Method=POST
