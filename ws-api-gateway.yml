@@ -29,9 +29,9 @@ management:
 #      base-path: ${server.servlet.context-path}/actuator
       exposure:
         include: '*'
-server:
-  servlet:
-    context-path: /ws-api-gateway
+#server:
+#  servlet:
+#    context-path: /ws-api-gateway
   port: 8096
 spring:
 #  application:
