@@ -39,7 +39,7 @@ secret:
 server:
   servlet:
     context-path: /ws-authenticator
-  port: 8083
+  port: 0
 
 spring:
   boot:
