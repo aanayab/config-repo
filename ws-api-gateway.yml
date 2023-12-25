@@ -53,7 +53,7 @@ spring:
             - Path=/get/**
           filters:
             - AddRequestHeader=Hello,World
-#            - StripPrefix=1
+            - StripPrefix=1
         - id: ws-authenticator
           uri: lb://WS-AUTHENTICATOR
           predicates: 
@@ -61,7 +61,7 @@ spring:
             - Method=POST
           filters:
 #            - AddRequestHeader=Hello,World
-#            - StripPrefix=1
+            - StripPrefix=1
               
 logging:
   config: classpath:logback-dev.xml
