@@ -36,43 +36,8 @@ spring:
     web-application-type: REACTIVE
 #  webflux:
 #    base-path: /ws-api-gateway
-  boot:
-    admin:
-      client:
-        url: http://localhost:8094/ws-admin-server
-        username: wsAdminServer
-        password: 'ws4dm1nS3rv3r*'
-  cloud: 
-    gateway: 
-      routes: 
-        - id: my_route
-          uri: http://httpbin.org:80
-          predicates: 
-            - Path=/get/**
-          filters:
-            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-        - id: ws-authenticator
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/authenticate/**
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-#            - StripPrefix=1
-              
-logging:
-  config: classpath:logback-dev.xml
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
   api-docs:
     path: /api-docs
-eureka:
-  context-path: /ws-eureka-server
-  single-instance:
-    host: localhost
-    port: 8761
-  client:
-    service-url: 
-      defaultZone: http://${eureka.single-instance.host}:${eureka.single-instance.port}${eureka.context-path}/eureka
