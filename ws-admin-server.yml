@@ -29,46 +29,12 @@ management:
 #      base-path: ${server.servlet.context-path}/actuator
       exposure:
         include: '*'
-MYSQL_HOST: y3wh6gobj769qsq7:o649fj9325yuhwx9@dcrhg4kh56j13bnu.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
 server:
   servlet:
     context-path: /ws-admin-server
   port: '8094'
 spring:
- application:
-    name: ws-admin-server
 # boot:
 #    admin:
 #      discovery:
 #        ignored-services: ws-api-gateway
- profiles:
-    active: '@activatedProperties@'
- datasource:
-  # password: o649fj9325yuhwx9
-    password: admin
-    driver-class-name: com.mysql.cj.jdbc.Driver
- #  username: y3wh6gobj769qsq7
-    username: root
- #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
-    url: jdbc:mysql://localhost:3306/authentication
-    hikari:
-      maximum-pool-size: 5
- jpa:
-    hibernate:
-      ddl-auto: validate
-    show-sql: 'true'
-#springdoc:
-#  swagger-ui:
-#    path: /swagger-ui.html
-#  api-docs:
-#    path: /api-docs  
-eureka:
-  client:
-    registryFetchIntervalSeconds: 5
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/ws-eureka-server/eureka}
-  instance:
-    hostname: localhost
-    preferIpAddress: true
