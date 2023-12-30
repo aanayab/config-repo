@@ -34,8 +34,8 @@ secret:
   expiration_time_minutes: 60
   
 server:
-  servlet:
-    context-path: /ws-authenticator
+#  servlet:
+#    context-path: /ws-authenticator
   port: 8093
 springdoc:
   swagger-ui:
