@@ -2,7 +2,7 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost:8094/ws-admin-server
+        url: http://localhost:8094
         username: wsAdminServer
         password: 'ws4dm1nS3rv3r*'
 eureka:
@@ -15,7 +15,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-            defaultZone: http://${eureka.instance.hostname}:${server.port}/${server.servlet.context-path}/
+            defaultZone: http://${eureka.instance.hostname}:${server.port}/
 # For single Eureka instance
 logging:
   config: classpath:logback-dev.xml  
