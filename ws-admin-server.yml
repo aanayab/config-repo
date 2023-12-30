@@ -5,6 +5,14 @@ management:
     health:
       enabled: true
       show-details: always
+    shutdown:
+      enabled: true
+    pause:
+      enabled: true
+    restart:
+      enabled: true
+    refresh:
+      enabled: true
   info:
     env:
       enabled: true
@@ -15,15 +23,7 @@ management:
     java:
       enabled: true
     os:
-      enabled: true   
-  shutdown:
-    enabled: true
-  pause:
-    enabled: true
-  restart:
-    enabled: true
-  refresh:
-    enabled: true
+      enabled: true
   endpoints:
     web:
 #      base-path: ${server.servlet.context-path}/actuator
