@@ -36,8 +36,8 @@ secret:
   expiration_time_minutes: 60
   
 server:
-  servlet:
-    context-path: /ws-administrator
+#  servlet:
+ #   context-path: /ws-administrator
   port: 0
 spring:
   boot:
