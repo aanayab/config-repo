@@ -38,7 +38,7 @@ secret:
 server:
 #  servlet:
  #   context-path: /ws-administrator
-  port: 0
+  port: '0'
 spring:
   boot:
     admin:
