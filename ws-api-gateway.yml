@@ -28,8 +28,6 @@ management:
       exposure:
         include: '*'
 server:
-  servlet:
-    context-path: /ws-api-gateway
   port: 8096
 spring:
   main:
