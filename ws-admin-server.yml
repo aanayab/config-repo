@@ -30,8 +30,8 @@ management:
       exposure:
         include: '*'
 server:
-  servlet:
-    context-path: /ws-admin-server
+#  servlet:
+#    context-path: /ws-admin-server
   port: '8094'
 spring:
 # boot:
