@@ -36,7 +36,7 @@ secret:
 server:
 #  servlet:
 #    context-path: /ws-authenticator
-  port: 8093
+  port: '0'
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
