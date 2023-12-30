@@ -37,12 +37,6 @@ server:
 spring:
  application:
     name: ws-admin-server
- boot:
-    admin:
-      client:
-        url: http://localhost:8094/ws-admin-server
-        username: wsAdminServer
-        password: 'ws4dm1nS3rv3r*'
 # boot:
 #    admin:
 #      discovery:
