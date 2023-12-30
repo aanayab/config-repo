@@ -1,10 +1,10 @@
 spring:
-  boot:
-    admin:
-      client:
-        url: http://localhost:8094
-        username: wsAdminServer
-        password: 'ws4dm1nS3rv3r*'
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:8094
+#        username: wsAdminServer
+#        password: 'ws4dm1nS3rv3r*'
   cloud: 
     gateway: 
       routes: 
