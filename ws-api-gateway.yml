@@ -34,8 +34,8 @@ spring:
     web-application-type: REACTIVE
 #  webflux:
 #    base-path: /ws-api-gateway
-springdoc:
-  swagger-ui:
-    path: /swagger-ui.html
-  api-docs:
-    path: /api-docs
+#springdoc:
+#  swagger-ui:
+#    path: /swagger-ui.html
+#  api-docs:
+#    path: /api-docs
