@@ -18,7 +18,7 @@ spring:
         - id: ws-authenticator
           uri: lb://WS-AUTHENTICATOR
           predicates: 
-            - Path=ws-authenticator/api/authenticate/**
+            - Path=/ws-authenticator/api/authenticate/**
             - Method=POST
           filters:
 #            - AddRequestHeader=Hello,World
