@@ -1,4 +1,6 @@
 spring:
+  config:
+    additional-location: endpoints-authenticator.yml
 #  boot:
 #    admin:
 #      client:
@@ -15,104 +17,6 @@ spring:
           filters:
             - AddRequestHeader=Hello,World
 #            - StripPrefix=1  
-# user endpoint
-        - id: ws-authenticator
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/api/authenticate/**
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-#            - StripPrefix=1           
-        - id: /ws-authenticator/api/user/create
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/user
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-        - id: /ws-authenticator/api/user/get
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/user/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-        - id: /ws-authenticator/api/user/auth/
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/user/auth/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-        - id: /ws-authenticator/api/user/all
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/user/all
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-        - id: /ws-authenticator/api/user/update
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/user
-            - Method=PUT
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-        - id: /ws-authenticator/api/user/delete
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/user
-            - Method=DELETE
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-## authioritie endpoint 
-        - id: /ws-authenticator/api/authority/create
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/authority
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-        - id: /ws-authenticator/api/authority/get
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/authority/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-        - id: /ws-authenticator/api/authority/all
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/authority/all
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-        - id: /ws-authenticator/api/authority/update
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/authority
-            - Method=PUT
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
-        - id: /ws-authenticator/api/authority/delete
-          uri: lb://WS-AUTHENTICATOR
-          predicates: 
-            - Path=/ws-authenticator/api/authority
-            - Method=DELETE
-          filters:
-#            - AddRequestHeader=Hello,World
-            - StripPrefix=1
 logging:
   config: classpath:logback-dev.xml
 eureka:
