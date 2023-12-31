@@ -1,4 +1,6 @@
 spring:
+  config:  
+     import: ws-authenticator.yml
 #  boot:
 #    admin:
 #      client:
