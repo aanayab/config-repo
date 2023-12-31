@@ -109,7 +109,7 @@ spring:
        - id: /ws-authenticator/api/authority/delete
           uri: lb://WS-AUTHENTICATOR
           predicates: 
-            - Path=/ws-authenticator/authority/user
+            - Path=/ws-authenticator/api/authority
             - Method=DELETE
           filters:
 #            - AddRequestHeader=Hello,World
