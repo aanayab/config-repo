@@ -1,6 +1,6 @@
 spring:
   config:
-    additional-location: endpoints-authenticator.yml
+    import: endpoints-authenticator.yml
 #  boot:
 #    admin:
 #      client:
