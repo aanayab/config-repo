@@ -1,5 +1,6 @@
- cloud:
-    gateway: 
+spring:
+  cloud:
+   gateway: 
       routes: 
 # user endpoint
         - id: ws-authenticator
