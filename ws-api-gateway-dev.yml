@@ -7,16 +7,16 @@ spring:
 #        url: http://localhost:8094
 #        username: wsAdminServer
 #        password: 'ws4dm1nS3rv3r*'
-#  cloud: 
-#    gateway: 
-#      routes: 
-#        - id: my_route
-#          uri: http://httpbin.org:80
-#          predicates: 
-#            - Path=/get/**
-#          filters:
-#            - AddRequestHeader=Hello,World
-#            - StripPrefix=1  
+  cloud: 
+    gateway: 
+      routes: 
+        - id: my_route
+          uri: http://httpbin.org:80
+          predicates: 
+            - Path=/get/**
+          filters:
+            - AddRequestHeader=Hello,World
+            - StripPrefix=1  
 
 logging:
   config: classpath:logback-dev.xml
