@@ -1,7 +1,3 @@
-spring:
-  cloud:
-    config:
-      name: endpoints-authenticator.yml
 management:
   endpoint:
     health:
