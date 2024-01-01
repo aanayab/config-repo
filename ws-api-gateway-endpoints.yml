@@ -8,7 +8,6 @@ spring:
             - Path=/get/**
           filters:
             - AddRequestHeader=Hello,World
-            - StripPrefix=1 
 # user endpoint
         - id: ws-authenticator
           uri: lb://WS-AUTHENTICATOR
