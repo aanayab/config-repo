@@ -1,6 +1,3 @@
-spring:
-  config:
-    import: endpoints-authenticator.yml
 management:
   endpoint:
     health:
