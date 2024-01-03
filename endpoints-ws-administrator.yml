@@ -1,5 +1,8 @@
-
-# user privilegy
+spring:
+  cloud:
+   gateway: 
+      routes: 
+#  privilegy
         - id: /ws-administrator/api/privilegy/create
           uri: lb://WS-ADMINISTRATOR
           predicates: 
