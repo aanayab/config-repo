@@ -29,10 +29,6 @@ management:
 #      base-path: ${server.servlet.context-path}/actuator
       exposure:
         include: '*'
-server:
-#  servlet:
-#    context-path: /ws-admin-server
-  port: '8094'
 spring:
 # boot:
 #    admin:
