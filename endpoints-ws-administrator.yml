@@ -1,6 +1,6 @@
 spring:
   cloud:
-   gateway: 
+    gateway: 
       routes: 
 #  privilegy
         - id: /ws-administrator/api/privilegy/create
@@ -11,7 +11,7 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1           
-       - id: /ws-administrator/api/privilegy/get
+        - id: /ws-administrator/api/privilegy/get
           uri: lb://WS-ADMINISTRATOR
           predicates: 
             - Path=/ws-administrator/api/privilegy/**
@@ -19,7 +19,7 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1     
-       - id: /ws-administrator/api/privilegy/all
+        - id: /ws-administrator/api/privilegy/all
           uri: lb://WS-ADMINISTRATOR
           predicates: 
             - Path=/ws-administrator/api/privilegy/all
@@ -27,7 +27,7 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1     
-       - id: /ws-administrator/api/privilegy/allByRole
+        - id: /ws-administrator/api/privilegy/allByRole
           uri: lb://WS-ADMINISTRATOR
           predicates: 
             - Path=/ws-administrator/api/privilegy/allByRole/**
