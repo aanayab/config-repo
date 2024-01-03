@@ -21,7 +21,7 @@ spring:
          default:
             loggerLevel: full
          wsAuthenticator:
-            url: http://localhost:8096/
+            url: http://localhost:8096
             username: wsAdministrator
             password: ws4dm1n1str4t0r*
 logging:
