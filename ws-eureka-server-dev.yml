@@ -5,17 +5,25 @@ spring:
         url: http://localhost:8094
         username: wsAdminServer
         password: 'ws4dm1nS3rv3r*'
-eureka:
- instance:
-   hostname: 'localhost'
+#eureka:
+# instance:
+#   hostname: 'localhost'
 #   statusPageUrlPath: ${management.endpoints.web.base-path}/info
 #   healthCheckUrlPath: ${management.endpoints.web.base-path}/health
-   instanceId: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
- client:
+#   instanceId: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
+# client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#    serviceUrl:
+#            defaultZone: http://${eureka.instance.hostname}:${server.port}/
+eureka:
+  instance:
+    hostname: localhost
+  client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-            defaultZone: http://${eureka.instance.hostname}:${server.port}/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 # For single Eureka instance
 logging:
   config: classpath:logback-dev.xml  
