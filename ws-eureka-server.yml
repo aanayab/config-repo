@@ -29,7 +29,3 @@ management:
 #      base-path: /actuator
       exposure:
         include: '*'
-server:
-#  servlet:
-#    context-path: /ws-eureka-server
-  port: 8761     
