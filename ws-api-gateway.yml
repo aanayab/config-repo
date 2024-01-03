@@ -1,6 +1,6 @@
 spring:
   config:
-    import: endpoints-ws-authenticator.yml
+    import: endpoints.yml
 management:
   endpoint:
     health:
