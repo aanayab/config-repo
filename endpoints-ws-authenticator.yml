@@ -109,7 +109,7 @@ spring:
         - id: /ws-authenticator/swagger-ui/index.html
           uri: lb://WS-AUTHENTICATOR
           predicates: 
-            - Path=/ws-authenticator/swagger-ui/index.html
+            - Path=/ws-authenticator/swagger-ui/**
             - Method=GET
           filters:
 #            - AddRequestHeader=Hello,World
