@@ -114,3 +114,11 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
+        - id: /ws-authenticator/pi-docs/
+          uri: lb://WS-AUTHENTICATOR
+          predicates: 
+            - Path=/ws-authenticator/api-docs/**
+            - Method=GET
+          filters:
+#            - AddRequestHeader=Hello,World
+            - StripPrefix=1
