@@ -1,10 +1,10 @@
-#spring:
-#  boot:
-#    admin:
-#      client:
-#       url: http://localhost:8094
-#      username: wsAdminServer
-#       password: 'ws4dm1nS3rv3r*'
+spring:
+  boot:
+    admin:
+      client:
+       url: http://localhost:8094
+      username: wsAdminServer
+       password: 'ws4dm1nS3rv3r*'
 eureka:
  instance:
    hostname: 'localhost'
