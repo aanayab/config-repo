@@ -1,7 +1,4 @@
 management:
-  server:
-    servlet:
-      context-path: /ws-eureka-server
 #  server:
 #    base-path: /actuator
   endpoint:
