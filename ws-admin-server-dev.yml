@@ -40,5 +40,3 @@ eureka:
   instance:
     hostname: localhost
     preferIpAddress: true
-logging:
- config: classpath:logback-dev.xml
