@@ -23,7 +23,7 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}${server.servlet.context-path}/eureka
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 # For single Eureka instance
 logging:
   config: classpath:logback-dev.xml  
