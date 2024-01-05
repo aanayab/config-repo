@@ -42,3 +42,6 @@ springdoc:
     path: /swagger-ui.html
   api-docs:
     path: /api-docs  
+eureka:    
+  instance:
+    instanceId: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
