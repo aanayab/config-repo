@@ -29,3 +29,6 @@ management:
 #      base-path: /actuator
       exposure:
         include: '*'
+eureka:    
+  instance:
+    instanceId: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
