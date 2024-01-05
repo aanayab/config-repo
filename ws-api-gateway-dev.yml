@@ -9,11 +9,17 @@ spring:
 #        password: 'ws4dm1nS3rv3r*'
 logging:
   config: classpath:logback-dev.xml
-eureka:
+#eureka:
 #  context-path: /ws-eureka-server
-  single-instance:
-    host: localhost
-    port: 8761
+#  single-instance:
+#    host: localhost
+#    port: 8761
+#  client:
+#    service-url: 
+#      defaultZone: http://${eureka.single-instance.host}:${eureka.single-instance.port}/eureka
+eureka:
   client:
-    service-url: 
-      defaultZone: http://${eureka.single-instance.host}:${eureka.single-instance.port}/eureka
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
