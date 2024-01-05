@@ -36,6 +36,4 @@ management:
 #        ignored-services: ws-api-gateway
 eureka:    
   instance:
-#    statusPageUrlPath: ${server.servlet.context-path}${management.endpoints.web.base-path}/info
-#   healthCheckUrlPath: ${server.servlet.context-path}${management.endpoints.web.base-path}/health
     instanceId: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
