@@ -7,8 +7,6 @@ spring:
 #        url: http://localhost:8094
 #        username: wsAdminServer
 #        password: 'ws4dm1nS3rv3r*'
-logging:
-  config: classpath:logback-dev.xml
 #eureka:
 #  context-path: /ws-eureka-server
 #  single-instance:
