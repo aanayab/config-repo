@@ -171,4 +171,45 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
+#  company
+        - id: /ws-administrator/api/company/create
+          uri: lb://WS-ADMINISTRATOR
+          predicates: 
+            - Path=/ws-administrator/api/company
+            - Method=POST
+          filters:
+#            - AddRequestHeader=Hello,World
+            - StripPrefix=1           
+        - id: /ws-administrator/api/company/get
+          uri: lb://WS-ADMINISTRATOR
+          predicates: 
+            - Path=/ws-administrator/api/company/**
+            - Method=GET
+          filters:
+#            - AddRequestHeader=Hello,World
+            - StripPrefix=1     
+        - id: /ws-administrator/api/company/all
+          uri: lb://WS-ADMINISTRATOR
+          predicates: 
+            - Path=/ws-administrator/api/company/all
+            - Method=GET
+          filters:
+#            - AddRequestHeader=Hello,World
+            - StripPrefix=1        
+        - id: /ws-administrator/api/company/update
+          uri: lb://WS-ADMINISTRATOR
+          predicates: 
+            - Path=/ws-administrator/api/company
+            - Method=PUT
+          filters:
+#            - AddRequestHeader=Hello,World
+            - StripPrefix=1
+        - id: /ws-administrator/api/company/delete
+          uri: lb://WS-ADMINISTRATOR
+          predicates: 
+            - Path=/ws-administrator/api/company
+            - Method=DELETE
+          filters:
+#            - AddRequestHeader=Hello,World
+            - StripPrefix=1
 
