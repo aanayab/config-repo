@@ -7,7 +7,7 @@ spring:
  #  username: y3wh6gobj769qsq7
     username: root
  #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
-    url: jdbc:mysql://localhost:3306/administrator
+    url: jdbc:mysql://192.168.100.15:3306/administrator
     hikari:
       maximum-pool-size: 5
   jpa:
@@ -21,7 +21,7 @@ spring:
          default:
             loggerLevel: full
          wsAuthenticator:
-            url: http://localhost:8096
+            url: http://192.168.100.15:8096
             username: wsAdministrator
             password: ws4dm1n1str4t0r*
 logging:
@@ -29,6 +29,6 @@ logging:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://192.168.100.15:8761/eureka}
   instance:
     preferIpAddress: true
