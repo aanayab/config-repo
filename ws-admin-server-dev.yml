@@ -18,7 +18,7 @@ spring:
  #  username: y3wh6gobj769qsq7
     username: root
  #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
-    url: jdbc:mysql://localhost:3306/authentication
+    url: jdbc:mysql://192.168.100.15:3306/authentication
     hikari:
       maximum-pool-size: 5
  jpa:
@@ -36,7 +36,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://192.168.100.15:8761/eureka}
   instance:
-    hostname: localhost
+    hostname: 192.168.100.15
     preferIpAddress: true
