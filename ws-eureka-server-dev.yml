@@ -31,6 +31,6 @@ eureka:
   instance:
     preferIpAddress: true
   server:
-    enableSelfPreservation: true
+    enableSelfPreservation: false
 
 # For single Eureka instance
