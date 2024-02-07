@@ -6,6 +6,8 @@ spring:
         url: http://192.168.100.15:8094
         username: wsAdminServer
         password: 'ws4dm1nS3rv3r*'
+     instance:
+        preferIpAddress: true
   datasource:
   # password: o649fj9325yuhwx9
     password: admin
