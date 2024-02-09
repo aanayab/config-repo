@@ -1,11 +1,11 @@
 MYSQL_HOST: y3wh6gobj769qsq7:o649fj9325yuhwx9@dcrhg4kh56j13bnu.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
 spring:
-  boot:
-    admin:
-      client:
-        url: http://192.168.100.15:8094
-        username: wsAdminServer
-        password: 'ws4dm1nS3rv3r*'
+ boot:
+   admin:
+     client:
+       url: http://192.168.100.15:8094
+       username: wsAdminServer
+       password: 'ws4dm1nS3rv3r*'
        instance:
          prefer-ip: true
 #    admin:
