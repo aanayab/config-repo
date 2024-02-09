@@ -20,8 +20,6 @@
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 eureka:
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://192.168.100.15:8761/eureka}
   instance:
