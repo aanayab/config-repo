@@ -20,6 +20,8 @@ spring:
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 eureka:
   client:
+    registerWithEureka: false
+    fetchRegistry: false
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://192.168.100.15:8761/eureka}
