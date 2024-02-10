@@ -22,7 +22,7 @@ spring:
 #    path: /swagger-ui.html
 #  api-docs:
 #    path: /api-docs  
-eureka:   (1)
+eureka:
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
