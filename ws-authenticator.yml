@@ -31,7 +31,7 @@ management:
         include: '*'
 secret:
   key: +KbPeShVmYq3t6v9y$B&E)H@McQfTjWnZr4u7x!z%C*F-JaNdRgUkXp2s5v8y/B?
-  expiration_time_minutes: 60
+  expiration_time_minutes: 30
   
 server:
 #  servlet:
