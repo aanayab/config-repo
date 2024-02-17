@@ -1,6 +1,3 @@
-spring:
-  config:
-    import: auth-conf.yml
 management:
 #  server:
 #    servlet:
