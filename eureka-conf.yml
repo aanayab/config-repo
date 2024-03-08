@@ -2,7 +2,7 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:8761/ws-eureka-server/eureka}
   instance:
     hostname: 192.168.100.15
     preferIpAddress: true
