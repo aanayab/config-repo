@@ -1,6 +1,6 @@
 server:
-#  servlet:
-#    context-path: /ws-config-server
+  servlet:
+    context-path: /ws-config-server
   port: '8095'
 management:
 #  server:
