@@ -1,6 +1,6 @@
 server:
-#  servlet:
-#    context-path: /ws-admin-server
+  servlet:
+    context-path: /ws-admin-server
   port: '8094'
 management:
 #  server:
