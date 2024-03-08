@@ -5,7 +5,7 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8761/ws-eureka-server/eureka}
   instance:
     hostname: 192.168.100.15
-    preferIpAddress: false
+    preferIpAddress: true
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
     metadata-map:
