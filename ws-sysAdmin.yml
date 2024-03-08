@@ -33,8 +33,8 @@ management:
       exposure:
         include: '*'
 server:
-#  servlet:
- #   context-path: /ws-administrator
+  servlet:
+    context-path: /ws-sysAdmin
   port: '0'
 springdoc:
   swagger-ui:
