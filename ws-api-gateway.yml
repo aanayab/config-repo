@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: 'ws-api-gateway'
+    context-path: /ws-api-gateway
 spring:
   config:
     import: endpoints.yml
