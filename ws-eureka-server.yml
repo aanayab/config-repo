@@ -1,6 +1,6 @@
 server:
-#  servlet:
-#    context-path: /ws-eureka-server
+  servlet:
+    context-path: /ws-eureka-server
   port: 8761   
 management:
 #  server:
