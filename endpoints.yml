@@ -11,7 +11,7 @@ spring:
 # ws-authenticator
 # user endpoint
         - id: ws-authenticator
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/api/authenticate/**
             - Method=POST
@@ -19,7 +19,7 @@ spring:
 #            - AddRequestHeader=Hello,World
 #            - StripPrefix=1  
         - id: ws-authenticator/validate
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/api/authenticate/validate/**
             - Method=POST
@@ -27,7 +27,7 @@ spring:
 #            - AddRequestHeader=Hello,World
 #            - StripPrefix=1  
         - id: ws-authenticator/refresh
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/api/authenticate/refresh/**
             - Method=POST
@@ -36,7 +36,7 @@ spring:
 #            - StripPrefix=1  
 
         - id: /ws-authenticator/api/user/create
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/user
             - Method=POST
@@ -44,7 +44,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-authenticator/api/user/get
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/user/**
             - Method=GET
@@ -52,7 +52,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /api/user/auth/
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/api/user/auth/**
             - Method=GET
@@ -60,7 +60,7 @@ spring:
 #            - AddRequestHeader=Hello,World
 #            - StripPrefix=1
         - id: /ws-authenticator/api/user/all
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/user/all
             - Method=GET
@@ -68,7 +68,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-authenticator/api/user/update
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/user
             - Method=PUT
@@ -76,7 +76,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-authenticator/api/user/delete
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/user
             - Method=DELETE
@@ -85,7 +85,7 @@ spring:
             - StripPrefix=1
 ## authioritie endpoint 
         - id: /ws-authenticator/api/authority/create
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/authority
             - Method=POST
@@ -93,7 +93,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-authenticator/api/authority/get
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/authority/**
             - Method=GET
@@ -101,7 +101,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-authenticator/api/authority/all
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/authority/all
             - Method=GET
@@ -109,7 +109,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-authenticator/api/authority/update
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/authority
             - Method=PUT
@@ -117,7 +117,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-authenticator/api/authority/delete
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/authority
             - Method=DELETE
@@ -125,7 +125,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-authenticator/swagger-ui/index.html
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/swagger-ui/**
             - Method=GET
@@ -133,7 +133,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-authenticator/pi-docs/
-          uri: lb://WS-AUTHENTICATOR
+          uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api-docs/**
             - Method=GET
@@ -143,7 +143,7 @@ spring:
 # ws-administrator
 #  privilegy
         - id: /ws-administrator/api/privilegy/create
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/privilegy
             - Method=POST
@@ -151,7 +151,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1           
         - id: /ws-administrator/api/privilegy/get
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/privilegy/**
             - Method=GET
@@ -159,7 +159,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1     
         - id: /ws-administrator/api/privilegy/all
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/privilegy/all
             - Method=GET
@@ -167,7 +167,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1     
         - id: /ws-administrator/api/privilegy/allByRole
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/privilegy/allByRole/**
             - Method=GET
@@ -175,7 +175,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1     
         - id: /ws-administrator/api/privilegy/update
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/privilegy
             - Method=PUT
@@ -183,7 +183,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-administrator/api/privilegy/delete
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/privilegy
             - Method=DELETE
@@ -192,7 +192,7 @@ spring:
             - StripPrefix=1
 #  company
         - id: /ws-administrator/api/company/create
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/company
             - Method=POST
@@ -200,7 +200,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1           
         - id: /ws-administrator/api/company/get
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/company/**
             - Method=GET
@@ -208,7 +208,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1     
         - id: /ws-administrator/api/company/all
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/company/all
             - Method=GET
@@ -216,7 +216,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1        
         - id: /ws-administrator/api/company/update
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/company
             - Method=PUT
@@ -224,7 +224,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-administrator/api/company/delete
-          uri: lb://WS-ADMINISTRATOR
+          uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/company
             - Method=DELETE
@@ -234,7 +234,7 @@ spring:
 # ws-sysAdmin
 #  privilegy
         - id: /ws-sysAdmin/api/privilegy/create
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/privilegy
             - Method=POST
@@ -242,7 +242,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1           
         - id: /ws-sysAdmin/api/privilegy/get
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/privilegy/**
             - Method=GET
@@ -250,7 +250,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1     
         - id: /ws-sysAdmin/api/privilegy/all
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/privilegy/all
             - Method=GET
@@ -258,7 +258,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1     
         - id: /ws-sysAdmin/api/privilegy/allByRole
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/privilegy/allByRole/**
             - Method=GET
@@ -266,7 +266,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1     
         - id: /ws-sysAdmin/api/privilegy/update
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/privilegy
             - Method=PUT
@@ -274,7 +274,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-sysAdmin/api/privilegy/delete
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/privilegy
             - Method=DELETE
@@ -283,7 +283,7 @@ spring:
             - StripPrefix=1
 #  company
         - id: /ws-sysAdmin/api/company/create
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/company
             - Method=POST
@@ -291,7 +291,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1           
         - id: /ws-sysAdmin/api/company/get
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/company/**
             - Method=GET
@@ -299,7 +299,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1     
         - id: /ws-sysAdmin/api/company/all
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/company/all
             - Method=GET
@@ -307,7 +307,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1        
         - id: /ws-sysAdmin/api/company/update
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/company
             - Method=PUT
@@ -315,7 +315,7 @@ spring:
 #            - AddRequestHeader=Hello,World
             - StripPrefix=1
         - id: /ws-sysAdmin/api/company/delete
-          uri: lb://WS-SYSADMIN
+          uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/company
             - Method=DELETE
