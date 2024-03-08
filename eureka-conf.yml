@@ -12,4 +12,4 @@ eureka:
       startup: ${random.int}    #needed to trigger info and endpoint update after restart
     instanceId: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
     management:
-        context-path: /${server.servlet.context-path}/actuato3
+        context-path: /${server.servlet.context-path}/actuator
