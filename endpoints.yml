@@ -5,10 +5,10 @@ spring:
         - id: my_route
           uri: http://httpbin.org:80
           predicates: 
-            - Path=/get/**
+            - Path=/ws-api-gateway/get/**
           filters:
             - AddRequestHeader=Hello,World
-            #- StripPrefix=1  
+            - StripPrefix=1  
 # ws-authenticator
 # user endpoint
         - id: ws-authenticator
