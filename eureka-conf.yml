@@ -6,6 +6,7 @@ eureka:
   instance:
     healthCheckUrlPath: ${server.servlet.context-path}/actuator/health
     statusPageUrlPath: ${server.servlet.context-path}/actuator/info
+    homePageUrl: ${server.servlet.context-path}/swagger-ui.html
     hostname: localhost
     preferIpAddress: false
     leaseRenewalIntervalInSeconds: 10
