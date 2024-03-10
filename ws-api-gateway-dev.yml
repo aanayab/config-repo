@@ -14,6 +14,9 @@ eureka:
     preferIpAddress: false
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
+    home-page-url:  /actuator/health
+    data-center-info: BOYERTECH
+    environment:   '@activatedProperties@'
     metadata-map:
       startup: ${random.int}    #needed to trigger info and endpoint update after restart
       management:
