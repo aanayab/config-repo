@@ -5,7 +5,7 @@ spring:
         - id: my_route
           uri: http://httpbin.org:80
           predicates: 
-            - Path=/ws-api-gateway/get/**
+            - Path=/get/**
           filters:
             - AddRequestHeader=Hello,World
            # - StripPrefix=1  
