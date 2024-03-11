@@ -12,25 +12,25 @@ spring:
 # ws-authenticator
 # user endpoint
         - id: ws-authenticator
-          uri: lb://ws-authenticator/ws-authenticator
+          uri: lb://ws-authenticator
           predicates: 
-            - Path=/api/authenticate/**
+            - Path=/ws-authenticator/api/authenticate/**
             - Method=POST
           filters:
 #            - AddRequestHeader=Hello,World
 #            - StripPrefix=1  
         - id: ws-authenticator/validate
-          uri: lb://ws-authenticator/ws-authenticator
+          uri: lb://ws-authenticator
           predicates: 
-            - Path=/api/authenticate/validate/**
+            - Path=/ws-authenticator/api/authenticate/validate/**
             - Method=POST
           filters:
 #            - AddRequestHeader=Hello,World
 #            - StripPrefix=1  
         - id: ws-authenticator/refresh
-          uri: lb://ws-authenticator/ws-authenticator
+          uri: lb://ws-authenticator
           predicates: 
-            - Path=/api/authenticate/refresh/**
+            - Path=/ws-authenticator/api/authenticate/refresh/**
             - Method=POST
           filters:
 #            - AddRequestHeader=Hello,World
@@ -53,9 +53,9 @@ spring:
 #            - AddRequestHeader=Hello,World
      #       - StripPrefix=1
         - id: /api/user/auth/
-          uri: lb://ws-authenticator/ws-authenticator
+          uri: lb://ws-authenticator
           predicates: 
-            - Path=/api/user/auth/**
+            - Path=/ws-authenticator/api/user/auth/**
             - Method=GET
           filters:
 #            - AddRequestHeader=Hello,World
