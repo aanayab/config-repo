@@ -6,11 +6,16 @@ eureka:
   instance:
     healthCheckUrlPath: ${server.servlet.context-path}/actuator/health
     statusPageUrlPath: ${server.servlet.context-path}/actuator/info
-    homePageUrl: ${server.servlet.context-path}/
+    homePageUrl: ${server.servlet.context-path}
+    homePageUrlPath: ${server.servlet.context-path}
+    home-page-url-path: ${server.servlet.context-path}
     hostname: localhost
     preferIpAddress: false
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: ${server.servlet.context-path}/actuator/health
+    home-page-url: ${server.servlet.context-path}
+  #  data-center-info: BOYERTECH
+  #  environment:   '@activatedProperties@'
     metadata-map:
       startup: ${random.int}    #needed to trigger info and endpoint update after restart
       management:
