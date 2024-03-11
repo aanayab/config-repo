@@ -1,11 +1,11 @@
 server:
   servlet:
-    context-path: /ws-api-gateway
+    context-path: ''
 spring:
   config:
     import: endpoints.yml
-  webflux:
-    base-path: /ws-api-gateway
+#  webflux:
+#    base-path: /ws-api-gateway
 management:
   endpoint:
     health:
