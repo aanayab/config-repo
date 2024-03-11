@@ -4,8 +4,8 @@ server:
 spring:
   config:
     import: endpoints.yml
-#  webflux:
-#    base-path: /ws-api-gateway
+  webflux:
+    base-path: /ws-api-gateway
 management:
   endpoint:
     health:
