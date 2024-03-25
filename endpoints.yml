@@ -323,4 +323,52 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
    #         - StripPrefix=1
-
+#  privilegy
+        - id: /ws-sysAdmin/api/menu/create
+          uri: lb://ws-sysAdmin
+          predicates: 
+            - Path=/ws-sysAdmin/api/menu
+            - Method=POST
+          filters:
+#            - AddRequestHeader=Hello,World
+  #          - StripPrefix=1           
+        - id: /ws-sysAdmin/api/menu/get
+          uri: lb://ws-sysAdmin
+          predicates: 
+            - Path=/ws-sysAdmin/api/menu/**
+            - Method=GET
+          filters:
+#            - AddRequestHeader=Hello,World
+  #          - StripPrefix=1     
+        - id: /ws-sysAdmin/api/menu/all
+          uri: lb://ws-sysAdmin
+          predicates: 
+            - Path=/ws-sysAdmin/api/menu/all
+            - Method=GET
+          filters:
+#            - AddRequestHeader=Hello,World
+ #           - StripPrefix=1     
+        - id: /ws-sysAdmin/api/menu/allByRole
+          uri: lb://ws-sysAdmin
+          predicates: 
+            - Path=/ws-sysAdmin/api/menu/allByRole/**
+            - Method=GET
+          filters:
+#            - AddRequestHeader=Hello,World
+ #           - StripPrefix=1     
+        - id: /ws-sysAdmin/api/menu/update
+          uri: lb://ws-sysAdmin
+          predicates: 
+            - Path=/ws-sysAdmin/api/menu
+            - Method=PUT
+          filters:
+#            - AddRequestHeader=Hello,World
+ #           - StripPrefix=1
+        - id: /ws-sysAdmin/api/menu/delete
+          uri: lb://ws-sysAdmin
+          predicates: 
+            - Path=/ws-sysAdmin/api/menu
+            - Method=DELETE
+          filters:
+#            - AddRequestHeader=Hello,World
+    #        - StripPrefix=1
