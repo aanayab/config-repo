@@ -84,14 +84,7 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
   #          - StripPrefix=1
-     - id: /ws-authenticator/api/user/enable/disable
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/user/disable
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-         #   - StripPrefix=1
+    
 ## authioritie endpoint 
         - id: /ws-authenticator/api/authority/create
           uri: lb://ws-authenticator
@@ -149,6 +142,14 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
    #         - StripPrefix=1
+         - id: /ws-authenticator/api/user/enable/disable
+          uri: lb://ws-authenticator
+          predicates: 
+            - Path=/ws-authenticator/api/user/disable
+            - Method=POST
+          filters:
+#            - AddRequestHeader=Hello,World
+         #   - StripPrefix=1   
 # ws-administrator
 #  privilegy
         - id: /ws-administrator/api/privilegy/create
