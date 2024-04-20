@@ -145,7 +145,7 @@ spring:
         - id: /ws-authenticator/api/user/enable/disable
           uri: lb://ws-authenticator
           predicates: 
-            - Path=/ws-authenticator/api/user/disable
+            - Path=/ws-authenticator/api/user/**
             - Method=POST
           filters:
 #            - AddRequestHeader=Hello,World
