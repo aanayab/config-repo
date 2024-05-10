@@ -1,6 +1,6 @@
 eureka:
- datacenter: BOYERTECH
- environment: ${spring.profiles.active}
+  datacenter: BOYERTECH
+  environment: ${spring.profiles.active}
   client:
     healthcheck:
       enabled: true
