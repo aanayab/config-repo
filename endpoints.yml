@@ -381,3 +381,12 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
     #        - StripPrefix=1
+##ws-email
+       - id: /ws-email
+          uri: lb://ws-email
+          predicates: 
+            - Path=/ws-email/**
+            - Method=*
+          filters:
+#            - AddRequestHeader=Hello,World
+    #        - StripPrefix=1
