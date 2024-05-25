@@ -386,7 +386,7 @@ spring:
           uri: lb://ws-email
           predicates: 
             - Path=/ws-email/**
-            - Method=*
+            - Method=POST,GET,PUT,DELETE,OPTIONS,HEAD
           filters:
 #            - AddRequestHeader=Hello,World
     #        - StripPrefix=1
