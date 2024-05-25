@@ -18,5 +18,13 @@ spring:
     hibernate:
       ddl-auto: validate
     show-sql: 'true'
-logging:
-  config: classpath:logback-dev.xml
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            loggerLevel: full
+          wsEmail:
+            url: http://localhost:8096
+            username: wsEmail
+            password: ws3m41l*  
