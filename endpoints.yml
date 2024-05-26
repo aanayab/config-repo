@@ -15,378 +15,49 @@ spring:
           uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/api/authenticate/**
-            - Method=POST
+            - Method=POST,GET,PUT,DELETE,OPTIONS
+#            - Header=**
           filters:
 #            - AddRequestHeader=Hello,World
 #            - StripPrefix=1  
-        - id: ws-authenticator/validate
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/authenticate/validate/**
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-#            - StripPrefix=1  
-        - id: ws-authenticator/refresh
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/authenticate/refresh/**
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-#            - StripPrefix=1  
-
-        - id: /ws-authenticator/api/user/create
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/user
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-         #   - StripPrefix=1
-        - id: /ws-authenticator/api/user/get
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/user/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-     #       - StripPrefix=1
-        - id: /api/user/auth/
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/user/auth/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-#            - StripPrefix=1
-        - id: /ws-authenticator/api/user/all
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/user/all
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-   #         - StripPrefix=1
-        - id: /ws-authenticator/api/user/update
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/user
-            - Method=PUT
-          filters:
-#            - AddRequestHeader=Hello,World
-   #         - StripPrefix=1
-        - id: /ws-authenticator/api/user/delete
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/user
-            - Method=DELETE
-          filters:
-#            - AddRequestHeader=Hello,World
-  #          - StripPrefix=1
-    
-## authioritie endpoint 
-        - id: /ws-authenticator/api/authority/create
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/authority
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-  #          - StripPrefix=1
-        - id: /ws-authenticator/api/authority/get
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/authority/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-  #          - StripPrefix=1
-        - id: /ws-authenticator/api/authority/all
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/authority/all
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-   #         - StripPrefix=1
-        - id: /ws-authenticator/api/authority/update
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/authority
-            - Method=PUT
-          filters:
-#            - AddRequestHeader=Hello,World
-   #         - StripPrefix=1
-        - id: /ws-authenticator/api/authority/delete
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/authority
-            - Method=DELETE
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1
-        - id: /ws-authenticator/swagger-ui/index.html
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/swagger-ui/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-#            - StripPrefix=1
-        - id: /ws-authenticator/pi-docs/
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api-docs/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-   #         - StripPrefix=1
-        - id: /ws-authenticator/api/user/enable/disable
-          uri: lb://ws-authenticator
-          predicates: 
-            - Path=/ws-authenticator/api/user/**
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-         #   - StripPrefix=1   
 # ws-administrator
 #  privilegy
-        - id: /ws-administrator/api/privilegy/create
+        - id: ws-administrator
           uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/api/privilegy
-            - Method=POST
+            - Method=POST,GET,PUT,DELETE,OPTIONS
+#            - Header=**            
           filters:
 #            - AddRequestHeader=Hello,World
  #           - StripPrefix=1           
-        - id: /ws-administrator/api/privilegy/get
-          uri: lb://ws-administrator
-          predicates: 
-            - Path=/ws-administrator/api/privilegy/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-  #          - StripPrefix=1     
-        - id: /ws-administrator/api/privilegy/all
-          uri: lb://ws-administrator
-          predicates: 
-            - Path=/ws-administrator/api/privilegy/all
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-#            - StripPrefix=1     
-        - id: /ws-administrator/api/privilegy/allByRole
-          uri: lb://ws-administrator
-          predicates: 
-            - Path=/ws-administrator/api/privilegy/allByRole/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-#            - StripPrefix=1     
-        - id: /ws-administrator/api/privilegy/update
-          uri: lb://ws-administrator
-          predicates: 
-            - Path=/ws-administrator/api/privilegy
-            - Method=PUT
-          filters:
-#            - AddRequestHeader=Hello,World
-  #          - StripPrefix=1
-        - id: /ws-administrator/api/privilegy/delete
-          uri: lb://ws-administrator
-          predicates: 
-            - Path=/ws-administrator/api/privilegy
-            - Method=DELETE
-          filters:
-#            - AddRequestHeader=Hello,World
-  #          - StripPrefix=1
-#  company
-        - id: /ws-administrator/api/company/create
-          uri: lb://ws-administrator
-          predicates: 
-            - Path=/ws-administrator/api/company
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1           
-        - id: /ws-administrator/api/company/get
-          uri: lb://ws-administrator
-          predicates: 
-            - Path=/ws-administrator/api/company/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1     
-        - id: /ws-administrator/api/company/all
-          uri: lb://ws-administrator
-          predicates: 
-            - Path=/ws-administrator/api/company/all
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1        
-        - id: /ws-administrator/api/company/update
-          uri: lb://ws-administrator
-          predicates: 
-            - Path=/ws-administrator/api/company
-            - Method=PUT
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1
-        - id: /ws-administrator/api/company/delete
-          uri: lb://ws-administrator
-          predicates: 
-            - Path=/ws-administrator/api/company
-            - Method=DELETE
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1
 # ws-sysAdmin
-#  privilegy
-        - id: /ws-sysAdmin/api/privilegy/create
+        - id: ws-sysAdmin
           uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/api/privilegy
-            - Method=POST
+            - Method=POST,GET,PUT,DELETE,OPTIONS
+#            - Header=**          
           filters:
 #            - AddRequestHeader=Hello,World
   #          - StripPrefix=1           
-        - id: /ws-sysAdmin/api/privilegy/get
-          uri: lb://ws-sysAdmin
+##ws-email
+        - id: ws-email
+          uri: lb://ws-email
           predicates: 
-            - Path=/ws-sysAdmin/api/privilegy/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-  #          - StripPrefix=1     
-        - id: /ws-sysAdmin/api/privilegy/all
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/privilegy/all
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1     
-        - id: /ws-sysAdmin/api/privilegy/allByRole
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/privilegy/allByRole/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1     
-        - id: /ws-sysAdmin/api/privilegy/update
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/privilegy
-            - Method=PUT
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1
-        - id: /ws-sysAdmin/api/privilegy/delete
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/privilegy
-            - Method=DELETE
-          filters:
-#            - AddRequestHeader=Hello,World
-    #        - StripPrefix=1
-#  company
-        - id: /ws-sysAdmin/api/company/create
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/company
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-    #        - StripPrefix=1           
-        - id: /ws-sysAdmin/api/company/get
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/company/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-   #         - StripPrefix=1     
-        - id: /ws-sysAdmin/api/company/all
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/company/all
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-   #         - StripPrefix=1        
-        - id: /ws-sysAdmin/api/company/update
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/company
-            - Method=PUT
-          filters:
-#            - AddRequestHeader=Hello,World
-   #         - StripPrefix=1
-        - id: /ws-sysAdmin/api/company/delete
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/company
-            - Method=DELETE
-          filters:
-#            - AddRequestHeader=Hello,World
-   #         - StripPrefix=1
-#  privilegy
-        - id: /ws-sysAdmin/api/menu/create
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/menu
-            - Method=POST
-          filters:
-#            - AddRequestHeader=Hello,World
-  #          - StripPrefix=1           
-        - id: /ws-sysAdmin/api/menu/get
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/menu/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
-  #          - StripPrefix=1     
-        - id: /ws-sysAdmin/api/menu/all
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/menu/all
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1     
-        - id: /ws-sysAdmin/api/menu/allByRole
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/menu/allByRole/**
-            - Method=GET
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1     
-        - id: /ws-sysAdmin/api/menu/update
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/menu
-            - Method=PUT
-          filters:
-#            - AddRequestHeader=Hello,World
- #           - StripPrefix=1
-        - id: /ws-sysAdmin/api/menu/delete
-          uri: lb://ws-sysAdmin
-          predicates: 
-            - Path=/ws-sysAdmin/api/menu
-            - Method=DELETE
+            - Path=/ws-email/**
+            - Method=POST,GET,PUT,DELETE,OPTIONS
+#            - Header=**            
           filters:
 #            - AddRequestHeader=Hello,World
     #        - StripPrefix=1
 ##ws-email
-        - id: /ws-email
-          uri: lb://ws-email
+        - id: ws-config-server
+          uri: lb://ws-config-server
           predicates: 
-            - Path=/ws-email/**
-            - Method=POST,GET,PUT,DELETE,OPTIONS,HEAD
+            - Path=/ws-config-server/**
+            - Method=POST,GET,PUT,DELETE,OPTIONS
+#            - Header=**            
           filters:
 #            - AddRequestHeader=Hello,World
     #        - StripPrefix=1
