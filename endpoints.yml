@@ -16,6 +16,7 @@ spring:
           predicates: 
             - Path=/ws-authenticator/api/authenticate/**
             - Method=POST,GET,PUT,DELETE,HEAD,OPTIONS,PATCH
+#            - Header=**
           metadata:
             cors:
               allowedOrigins: '*'
@@ -32,6 +33,7 @@ spring:
           predicates: 
             - Path=/ws-administrator/api/privilegy
             - Method=POST,GET,PUT,DELETE,HEAD,OPTIONS,PATCH
+#            - Header=**            
           metadata:
             cors:
               allowedOrigins: '*'
@@ -47,6 +49,7 @@ spring:
           predicates: 
             - Path=/ws-sysAdmin/api/privilegy
             - Method=POST,GET,PUT,DELETE,HEAD,OPTIONS,PATCH
+#            - Header=**          
           metadata:
             cors:
               allowedOrigins: '*'
@@ -62,6 +65,7 @@ spring:
           predicates: 
             - Path=/ws-email/**
             - Method=POST,GET,PUT,DELETE,HEAD,OPTIONS,PATCH
+#            - Header=**            
           metadata:
             cors:
               allowedOrigins: '*'
@@ -77,6 +81,7 @@ spring:
           predicates: 
             - Path=/ws-config-server/**
             - Method=POST,GET,PUT,DELETE,HEAD,OPTIONS,PATCH
+#            - Header=**            
           metadata:
             cors:
               allowedOrigins: '*'
