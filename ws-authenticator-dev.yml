@@ -27,6 +27,6 @@ spring:
           wsEmail:
             url: http://localhost:8096/ws-email
           wsAuthenticator:
-            url: http://localhost:8096
+            url: http://localhost:8096/ws-authenticator
             username: wsAuthenticator
             password: ws4uth3nt1c4t0r*
