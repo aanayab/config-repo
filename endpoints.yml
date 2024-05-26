@@ -15,7 +15,7 @@ spring:
           uri: lb://ws-authenticator
           predicates: 
             - Path=/ws-authenticator/**
-            - Method=POST,GET,PUT,DELETE,OPTIONS
+            - Method=POST,GET,PUT,DELETE
 #            - Header=**
           filters:
 #            - AddRequestHeader=Hello,World
@@ -26,7 +26,7 @@ spring:
           uri: lb://ws-administrator
           predicates: 
             - Path=/ws-administrator/**
-            - Method=POST,GET,PUT,DELETE,OPTIONS
+            - Method=POST,GET,PUT,DELETE
 #            - Header=**            
           filters:
 #            - AddRequestHeader=Hello,World
@@ -36,7 +36,7 @@ spring:
           uri: lb://ws-sysAdmin
           predicates: 
             - Path=/ws-sysAdmin/**
-            - Method=POST,GET,PUT,DELETE,OPTIONS
+            - Method=POST,GET,PUT,DELETE
 #            - Header=**          
           filters:
 #            - AddRequestHeader=Hello,World
@@ -46,7 +46,7 @@ spring:
           uri: lb://ws-email
           predicates: 
             - Path=/ws-email/**
-            - Method=POST,GET,PUT,DELETE,OPTIONS
+            - Method=POST,GET,PUT,DELETE
 #            - Header=**            
           filters:
 #            - AddRequestHeader=Hello,World
@@ -56,7 +56,7 @@ spring:
           uri: lb://ws-config-server
           predicates: 
             - Path=/ws-config-server/**
-            - Method=POST,GET,PUT,DELETE,OPTIONS
+            - Method=POST,GET,PUT,DELETE
 #            - Header=**            
           filters:
 #            - AddRequestHeader=Hello,World
