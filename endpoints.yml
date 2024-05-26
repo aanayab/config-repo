@@ -14,7 +14,7 @@ spring:
         - id: ws-authenticator
           uri: lb://ws-authenticator
           predicates: 
-            - Path=/ws-authenticator/api/authenticate/**
+            - Path=/ws-authenticator/**
             - Method=POST,GET,PUT,DELETE,OPTIONS
 #            - Header=**
           filters:
@@ -25,7 +25,7 @@ spring:
         - id: ws-administrator
           uri: lb://ws-administrator
           predicates: 
-            - Path=/ws-administrator/api/privilegy
+            - Path=/ws-administrator/**
             - Method=POST,GET,PUT,DELETE,OPTIONS
 #            - Header=**            
           filters:
@@ -35,7 +35,7 @@ spring:
         - id: ws-sysAdmin
           uri: lb://ws-sysAdmin
           predicates: 
-            - Path=/ws-sysAdmin/api/privilegy
+            - Path=/ws-sysAdmin/**
             - Method=POST,GET,PUT,DELETE,OPTIONS
 #            - Header=**          
           filters:
