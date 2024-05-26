@@ -26,5 +26,7 @@ spring:
             loggerLevel: full
           wsEmail:
             url: http://localhost:8096/ws-email
-            username: wsEmail
-            password: ws3m41l*  
+          wsAuthenticator:
+            url: http://localhost:8096
+            username: wsAuthenticator
+            password: ws4uth3nt1c4t0r*
