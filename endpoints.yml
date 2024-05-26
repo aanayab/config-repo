@@ -17,12 +17,6 @@ spring:
             - Path=/ws-authenticator/api/authenticate/**
             - Method=POST,GET,PUT,DELETE,HEAD,OPTIONS,PATCH
 #            - Header=**
-          metadata:
-            cors:
-              allowedOrigins: '*'
-              allowedMethods: '*'
-              allowedHeaders: '*'
-              maxAge: 30
           filters:
 #            - AddRequestHeader=Hello,World
 #            - StripPrefix=1  
@@ -34,12 +28,6 @@ spring:
             - Path=/ws-administrator/api/privilegy
             - Method=POST,GET,PUT,DELETE,HEAD,OPTIONS,PATCH
 #            - Header=**            
-          metadata:
-            cors:
-              allowedOrigins: '*'
-              allowedMethods: '*'
-              allowedHeaders: '*'
-              maxAge: 30
           filters:
 #            - AddRequestHeader=Hello,World
  #           - StripPrefix=1           
@@ -50,12 +38,6 @@ spring:
             - Path=/ws-sysAdmin/api/privilegy
             - Method=POST,GET,PUT,DELETE,HEAD,OPTIONS,PATCH
 #            - Header=**          
-          metadata:
-            cors:
-              allowedOrigins: '*'
-              allowedMethods: '*'
-              allowedHeaders: '*'
-              maxAge: 30
           filters:
 #            - AddRequestHeader=Hello,World
   #          - StripPrefix=1           
@@ -66,12 +48,6 @@ spring:
             - Path=/ws-email/**
             - Method=POST,GET,PUT,DELETE,HEAD,OPTIONS,PATCH
 #            - Header=**            
-          metadata:
-            cors:
-              allowedOrigins: '*'
-              allowedMethods: '*'
-              allowedHeaders: '*'
-              maxAge: 30
           filters:
 #            - AddRequestHeader=Hello,World
     #        - StripPrefix=1
@@ -82,12 +58,6 @@ spring:
             - Path=/ws-config-server/**
             - Method=POST,GET,PUT,DELETE,HEAD,OPTIONS,PATCH
 #            - Header=**            
-          metadata:
-            cors:
-              allowedOrigins: '*'
-              allowedMethods: '*'
-              allowedHeaders: '*'
-              maxAge: 30
           filters:
 #            - AddRequestHeader=Hello,World
     #        - StripPrefix=1
