@@ -24,7 +24,7 @@ spring:
             loggerLevel: full
          wsAuthenticator:
             url: http://192.168.100.15:8096
-            username: wsAdministrator
-            password: ws4dm1n1str4t0r*
+            username: wsSysAdmin
+            password: wsSys4dm1n*
 logging:
   config: classpath:logback-dev.xml
