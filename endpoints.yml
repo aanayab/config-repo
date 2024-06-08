@@ -51,11 +51,31 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
     #        - StripPrefix=1
-##ws-email
+##ws-config server
         - id: ws-config-server
           uri: lb://ws-config-server
           predicates: 
             - Path=/ws-config-server/**
+            - Method=POST,GET,PUT,DELETE
+#            - Header=**            
+          filters:
+#            - AddRequestHeader=Hello,World
+    #        - StripPrefix=1
+##ws-eureka-server
+        - id: ws-eureka-server
+          uri: lb://ws-eureka-server
+          predicates: 
+            - Path=/ws-eureka-server/**
+            - Method=POST,GET,PUT,DELETE
+#            - Header=**            
+          filters:
+#            - AddRequestHeader=Hello,World
+    #        - StripPrefix=1
+##ws-admin server
+        - id: ws-admin-server
+          uri: lb://ws-admin-server
+          predicates: 
+            - Path=/ws-admin-server/**
             - Method=POST,GET,PUT,DELETE
 #            - Header=**            
           filters:
