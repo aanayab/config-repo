@@ -1,6 +1,3 @@
-server:
-  servlet:
-    context-path: ''
 spring:
   config:
     import: endpoints.yml
