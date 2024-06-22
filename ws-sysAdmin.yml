@@ -32,10 +32,6 @@ management:
 #      base-path: ${server.servlet.context-path}/actuator
       exposure:
         include: '*'
-server:
-  servlet:
-    context-path: /ws-sysAdmin
-  port: '0'
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
