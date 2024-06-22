@@ -20,6 +20,8 @@ eureka:
     homePageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}
     hostname: localhost
     preferIpAddress: false
+    ip-address: ${ip:localhost}
+    non-secure-port: ${port:${server.port}}
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 10    
   #  data-center-info: BOYERTECH
@@ -29,5 +31,5 @@ eureka:
       management:
         context-path: ${server.servlet.context-path}/actuator
 #        port: ${management.port}
-    instanceId: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
+    instanceId: ${spring.application.name}:${non-secure-port:${server.port}}:${spring.application.instance_id:${random.value}}
     
