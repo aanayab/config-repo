@@ -18,9 +18,9 @@ eureka:
     statusPageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/info
     homePageUrl: ${server.servlet.context-path}${spring.mvc.servlet.path:}
     homePageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}
-    hostname: ${ip:localhost}
+    hostname: ${IP:localhost}
     preferIpAddress: true
-    ip-address: ${ip:localhost}
+    ip-address: ${IP:localhost}
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 10    
   #  data-center-info: BOYERTECH
