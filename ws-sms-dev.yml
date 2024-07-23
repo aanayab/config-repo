@@ -1,0 +1,44 @@
+aws:
+  bucketName: boyertech
+  fileName: email-templates/confirmation_signing_up.html  
+MYSQL_HOST: y3wh6gobj769qsq7:o649fj9325yuhwx9@dcrhg4kh56j13bnu.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+spring:
+  mail:
+    host: email-smtp.us-west-1.amazonaws.com
+    sender: notificaciones@boyertech.com.mx
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+            required: 'true'
+          auth: 'true'
+          port: '587'
+        transport:
+          protocol: smtp  
+  config:
+    import: eureka-conf.yml
+  datasource:
+  # password: o649fj9325yuhwx9
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+ #  username: y3wh6gobj769qsq7
+    username: root
+ #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
+    url: jdbc:mysql://localhost:3306/sys_admin
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: 'true'
+  cloud:
+    openfeign:
+      client:
+        config:
+         default:
+            loggerLevel: full
+         wsAuthenticator:
+            url: http://localhost:8096/ws-authenticator
+            username: wsEmail
+            password: ws3m41l*
