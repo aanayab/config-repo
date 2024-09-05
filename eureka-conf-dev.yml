@@ -1,0 +1,34 @@
+eureka:
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    enableSelfPreservation: true
+  datacenter: BOYERTECH
+  environment: ${spring.profiles.active}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    initialInstanceInfoReplicationIntervalSeconds: 40
+    healthcheck:
+      enabled: true
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/ws-eureka-server/eureka}
+  instance:
+    healthCheckUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
+    statusPageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/info
+    homePageUrl: ${server.servlet.context-path}${spring.mvc.servlet.path:}
+    homePageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}
+    hostname: ${IP:localhost}
+    preferIpAddress: true
+    ip-address: ${IP:localhost}
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 10    
+  #  data-center-info: BOYERTECH
+  #  environment:   '@activatedProperties@'
+    metadata-map:
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart
+      management:
+        context-path: ${server.servlet.context-path}/actuator
+#        port: ${management.port}
+    instanceId: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
+    
