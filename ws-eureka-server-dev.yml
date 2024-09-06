@@ -1,3 +1,24 @@
 spring:
   config:
-    import: eureka-conf-dev.yml,rabbit-logger-filter-dev.yml
+    import: eureka-conf-dev.yml
+rabbitmq:
+  logger:
+    filter:
+      exchange-fanout: ws.logger.fanout
+      exchange-direct: ws.logger.direct
+      exchange-topic: ws.logger.topic
+      queue: ws.logger.requestLogger 
+      virtual-host: com.boyertech.logger  # Si tienes un virtual host configurado
+      password: wsL0gg3r*
+      port: '5671'
+      host: b-c94e44af-0512-4439-8462-84118dc18a65.mq.us-west-1.amazonaws.com
+      username: wsLoggerPb
+      ssl:
+     #   enabled: true
+        algorithm: TLSv1.2
+        key-store: /mykeystore.jks  # Si usas un keystore
+#        key-store: classpath:mykeystore.jks  # Si usas un keystore
+        key-store-password: wsL0gg3r*
+        trust-store: /mytruststore.jks  # Si usas un truststore
+#        trust-store: classpath:mytruststore.jks  # Si usas un truststore
+        trust-store-password: wsL0gg3r*  
