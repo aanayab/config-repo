@@ -1,6 +1,7 @@
 rabbitmq:
   logger:
     filter:
+      enabled: true
       exchange-fanout: ws.logger.fanout
       exchange-direct: ws.logger.direct
       exchange-topic: ws.logger.topic

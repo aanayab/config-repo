@@ -24,3 +24,7 @@ spring:
 #    path: /swagger-ui.html
 #  api-docs:
 #    path: /api-docs  
+rabbitmq:
+  logger:
+    filter:
+      enabled: false

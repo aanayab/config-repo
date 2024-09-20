@@ -1,3 +1,7 @@
 spring:
   config:
     import: eureka-conf-dev.yml,rabbitLoggerFilter-dev.yml
+rabbitmq:
+  logger:
+    filter:
+      enabled: false
