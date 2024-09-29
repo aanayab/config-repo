@@ -17,7 +17,7 @@ spring:
         transport:
           protocol: smtp  
   config:
-    import: eureka-conf.yml
+    import: eureka-conf.yml,rabbitLoggerFilter-dev.yml
   datasource:
   # password: o649fj9325yuhwx9
     password: admin
