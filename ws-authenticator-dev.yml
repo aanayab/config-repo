@@ -1,7 +1,7 @@
 MYSQL_HOST: y3wh6gobj769qsq7:o649fj9325yuhwx9@dcrhg4kh56j13bnu.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
 spring:
   config:
-    import: eureka-conf.yml
+    import: eureka-conf.yml,rabbitLoggerFilter-dev.yml
  # application:
   #  name: ws-authenticator
   datasource:
