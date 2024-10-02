@@ -2,6 +2,7 @@ rabbitmq:
   logger:
     filter:
       enabled: true
+      enpoints-excluded: actuator,eureka,ws-config-server 
       exchange-fanout: ws.logger.fanout
       exchange-direct: ws.logger.direct
       exchange-topic: ws.logger.topic
