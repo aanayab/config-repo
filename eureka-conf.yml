@@ -12,23 +12,25 @@ eureka:
       enabled: true
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/ws-eureka-server/eureka}
+      defaultZone: ${EUREKA_URI:http://wsEurekaServer:ws3ur3k4S3rv3r*@localhost:8761/ws-eureka-server/eureka}
   instance:
     healthCheckUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
     statusPageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/info
-    homePageUrl: ${server.servlet.context-path}${spring.mvc.servlet.path:}
-    homePageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}
-    hostname: ${IP:localhost}
+    homePageUrl: ${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
+    homePageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
     preferIpAddress: true
     ip-address: ${IP:localhost}
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 10    
-  #  data-center-info: BOYERTECH
-  #  environment:   '@activatedProperties@'
     metadata-map:
       startup: ${random.int}    #needed to trigger info and endpoint update after restart
+      homePageUrl: ${IP:localhost}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
+      managementUrl: ${IP:localhost}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
+      healthCheckUrl: ${IP:localhost}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
+      documentationUrl: ${IP:localhost}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
+      version: '@project.version@'
       management:
-        context-path: ${server.servlet.context-path}/actuator
+        context-path: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
 #        port: ${management.port}
     instanceId: ${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
     
