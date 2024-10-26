@@ -81,3 +81,13 @@ spring:
           filters:
 #            - AddRequestHeader=Hello,World
     #        - StripPrefix=1
+##ws-sms
+        - id: ws-sms
+          uri: lb://ws-sms
+          predicates: 
+            - Path=/ws-sms/**
+            - Method=POST,GET,PUT,DELETE
+#            - Header=**            
+          filters:
+#            - AddRequestHeader=Hello,World
+    #        - StripPrefix=1
