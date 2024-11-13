@@ -9,7 +9,7 @@ spring:
  #  username: y3wh6gobj769qsq7
     username: wsSysAdminDB
  #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
-    url: jdbc:mysql://sysadmin.cdwuqk40emj5.us-west-1.rds.amazonaws.com/sys_admin
+    url: jdbc:mysql://sysadmin.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/sys_admin
     hikari:
       maximum-pool-size: 5
   jpa:
