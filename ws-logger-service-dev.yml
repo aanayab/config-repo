@@ -5,12 +5,12 @@ spring:
     import: eureka-conf.yml
   datasource:
   # password: o649fj9325yuhwx9
-    password: admin
+    password: wsL0gg3rDB*
     driver-class-name: com.mysql.cj.jdbc.Driver
  #  username: y3wh6gobj769qsq7
-    username: root
+    username: wsLoggerDB
  #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
-    url: jdbc:mysql://localhost:3306/logger
+    url: jdbc:mysql://logger.cdwuqk40emj5.us-west-1.rds.amazonaws.com/logger
     hikari:
       maximum-pool-size: 5
   jpa:
