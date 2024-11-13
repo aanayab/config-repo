@@ -11,7 +11,7 @@ spring:
  #  username: y3wh6gobj769qsq7
     username: wsAuthenticatorDB
  #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
-    url: jdbc:mysql://authentication.cdwuqk40emj5.us-west-1.rds.amazonaws.com/authentication
+    url: jdbc:mysql://authentication.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/authentication
     hikari:
       maximum-pool-size: 5
   jpa:
