@@ -4,12 +4,12 @@ spring:
     import: eureka-conf.yml,rabbitLoggerFilter-dev.yml
   datasource:
   # password: o649fj9325yuhwx9
-    password: admin
+    password: wsSys4dm1nDB*
     driver-class-name: com.mysql.cj.jdbc.Driver
  #  username: y3wh6gobj769qsq7
-    username: root
+    username: wsSysAdminDB
  #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
-    url: jdbc:mysql://localhost:3306/sys_admin
+    url: jdbc:mysql://sysadmin.cdwuqk40emj5.us-west-1.rds.amazonaws.com/sys_admin
     hikari:
       maximum-pool-size: 5
   jpa:
