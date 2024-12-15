@@ -6,12 +6,12 @@ spring:
 #      discovery:
 #        ignored-services: ws-api-gateway
  datasource:
-    password: o649fj9325yuhwx9
-    #password: ws4uth3nt1c4t0rDB*
+    #password: o649fj9325yuhwx9
+    password: ws4uth3nt1c4t0rDB*
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: y3wh6gobj769qsq7
-    #username: wsAuthenticatorDB
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
+    #username: y3wh6gobj769qsq7
+    username: wsAuthenticatorDB
+    url: jdbc:mysql://${MYSQL_HOST:50.18.24.43}:3306/authentication
     #url: jdbc:mysql://authentication.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/authentication
     hikari:
       maximum-pool-size: 5
@@ -35,7 +35,7 @@ rabbitmq:
       virtual-host: com.boyertech.logger  # Si tienes un virtual host configurado
       password: wsL0gg3r*
       port: '5671'
-      host: b-c94e44af-0512-4439-8462-84118dc18a65.mq.us-west-1.amazonaws.com
+      host: 50.18.24.43
       username: wsLoggerPb
       ssl:
      #   enabled: true
