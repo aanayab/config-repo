@@ -24,7 +24,7 @@ rabbitmq:
     virtual-host: com.boyertech.logger  # Si tienes un virtual host configurado
     password: wsL0gg3r*
     port: '5671'
-    host: b-c94e44af-0512-4439-8462-84118dc18a65.mq.us-west-1.amazonaws.com
+    host: 50.18.24.43
     username: wsLoggerPb
     ssl:
     #   enabled: true
