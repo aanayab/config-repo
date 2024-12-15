@@ -1,7 +1,7 @@
 aws:
   bucketName: boyertech
   fileName: email-templates/confirmation_signing_up.html  
-MYSQL_HOST: y3wh6gobj769qsq7:o649fj9325yuhwx9@dcrhg4kh56j13bnu.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+MYSQL_HOST: 50.18.24.43
 spring:
   mail:
     host: email-smtp.us-west-1.amazonaws.com
