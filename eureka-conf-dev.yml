@@ -21,15 +21,15 @@ eureka:
     #secure-health-check-url: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
 #    hostname: ${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
     preferIpAddress: true
-    ip-address: ${IP:localhost}
+    ip-address: ${IP:api-dev.boyertech.mx}
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 10
     metadata-map:
       startup: ${random.int}    #needed to trigger info and endpoint update after restart
-      homePageUrl: ${IP:localhost}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
-      managementUrl: ${IP:localhost}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
-      healthCheckUrl: ${IP:localhost}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
-      documentationUrl: ${IP:localhost}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
+      homePageUrl: ${IP:api-dev.boyertech.mx}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
+      managementUrl: ${IP:api-dev.boyertech.mx}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
+      healthCheckUrl: ${IP:api-dev.boyertech.mx}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
+      documentationUrl: ${IP:api-dev.boyertech.mx}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
       version: ${info.application.version}
       management:
         context-path: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
