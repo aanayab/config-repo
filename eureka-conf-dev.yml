@@ -12,7 +12,7 @@ eureka:
       enabled: true
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://wsEurekaServer:ws3ur3k4S3rv3r*@localhost:8761/ws-eureka-server/eureka}
+      defaultZone: ${EUREKA_URI:http://wsEurekaServer:ws3ur3k4S3rv3r*@api-dev.boyertech.mx:8761/ws-eureka-server/eureka}
   instance:
     healthCheckUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
     sstatusPageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/info
