@@ -1,3 +1,37 @@
+server:
+  servlet:
+    context-path: /ws-eureka-server
+  port: ${PORT:8761}
+logging:
+ config: classpath:logback-dev.xml
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    shutdown:
+      enabled: true
+    pause:
+      enabled: true
+    restart:
+      enabled: true
+    refresh:
+      enabled: true
+  info:
+    env:
+      enabled: true
+    build:
+      enabled: true
+    git:
+      enabled: true
+    java:
+      enabled: true
+    os:
+      enabled: true   
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 rabbitmq:
   logger:
     filter:
@@ -9,7 +43,7 @@ rabbitmq:
       virtual-host: com.boyertech.logger  # Si tienes un virtual host configurado
       password: wsL0gg3r*
       port: '5671'
-      host: 50.18.24.43
+      host: ${RABBIT_URI:rabbit-dev.boyertech.mx}
       username: wsLoggerPb
       ssl:
      #   enabled: true
@@ -29,7 +63,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     #username: y3wh6gobj769qsq7
     username: wsAuthenticatorDB
-    url: jdbc:mysql://${MYSQL_HOST:50.18.24.43}:3306/authentication
+    url: jdbc:mysql://${MYSQL_HOST:bd-dev.boyertech.mx}:3306/authentication
     #url: jdbc:mysql://authentication.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/authentication
     hikari:
       maximum-pool-size: 5
