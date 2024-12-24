@@ -24,7 +24,7 @@ rabbitmq:
     virtual-host: com.boyertech.logger  # Si tienes un virtual host configurado
     password: wsL0gg3r*
     port: '5671'
-    host: 50.18.24.43
+    host: ${RABBIT_URI:rabbit-dev.boyertech.mx}
     username: wsLoggerPb
     ssl:
     #   enabled: true
