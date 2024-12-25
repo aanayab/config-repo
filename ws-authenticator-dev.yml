@@ -1,4 +1,4 @@
-MYSQL_HOST: 50.18.24.43
+MYSQL_HOST: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
 spring:
   config:
     import: eureka-conf.yml,rabbitLoggerFilter-dev.yml
@@ -6,11 +6,11 @@ spring:
   #  name: ws-authenticator
   datasource:
     #password: o649fj9325yuhwx9
-    password: ws4uth3nt1c4t0rDB*
+    password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
     driver-class-name: com.mysql.cj.jdbc.Driver
     #username: y3wh6gobj769qsq7
-    username: wsAuthenticatorDB
-    url: jdbc:mysql://${MYSQL_HOST:50.18.24.43}:3306/authentication
+    username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+    url: jdbc:mysql://${MYSQL_HOST:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:3306/authentication
     #url: jdbc:mysql://authentication.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/authentication
     hikari:
       maximum-pool-size: 5
@@ -25,8 +25,8 @@ spring:
           default:
             loggerLevel: full
           wsEmail:
-            url: http://localhost:8096/ws-email
+            url: http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8096/ws-email
           wsAuthenticator:
-            url: http://localhost:8096/ws-authenticator
-            username: wsAuthenticator
-            password: ws4uth3nt1c4t0r*
+            url: http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8096/ws-authenticator
+            username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+            password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
