@@ -1,4 +1,4 @@
-MYSQL_HOST: 50.18.24.43
+MYSQL_HOST: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
 spring:
   config:
     import: eureka-conf.yml,rabbitLoggerFilter-dev.yml
@@ -9,6 +9,6 @@ spring:
          default:
             loggerLevel: full
          wsAuthenticator:
-            url: http://localhost:8096/ws-authenticator
-            username: wsEmail
-            password: ws3m41l*
+            url: http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8096/ws-authenticator
+            username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+            password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
