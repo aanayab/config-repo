@@ -1,15 +1,15 @@
-MYSQL_HOST: y3wh6gobj769qsq7:o649fj9325yuhwx9@dcrhg4kh56j13bnu.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+MYSQL_HOST: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
 spring:
   config:
     import: eureka-conf.yml
   datasource:
   # password: o649fj9325yuhwx9
-    password: admin
+    password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
     driver-class-name: com.mysql.cj.jdbc.Driver
  #  username: y3wh6gobj769qsq7
-    username: root
+    username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
  #  url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/eqzllf9uo0wemtvb
-    url: jdbc:mysql://localhost:3306/administrator
+    url: jdbc:mysql://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):3306/administrator
     hikari:
       maximum-pool-size: 5
   jpa:
@@ -23,8 +23,8 @@ spring:
          default:
             loggerLevel: full
          wsAuthenticator:
-            url: http://192.168.100.15:8096
-            username: wsAdministrator
-            password: ws4dm1n1str4t0r*
+            url: http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8096
+            username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+            password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
 logging:
   config: classpath:logback-dev.xml
