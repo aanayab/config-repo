@@ -1,11 +1,11 @@
 aws:
   bucketName: boyertech
   fileName: email-templates/confirmation_signing_up.html  
-MYSQL_HOST: 50.18.24.43
+MYSQL_HOST: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
 spring:
   mail:
-    host: email-smtp.us-west-1.amazonaws.com
-    sender: notificaciones@boyertech.com.mx
+    host: ENC(email-smtp.us-west-1.amazonaws.com)
+    sender: ENC(notificaciones@boyertech.com.mx)
     properties:
       mail:
         smtp:
@@ -25,6 +25,6 @@ spring:
          default:
             loggerLevel: full
          wsAuthenticator:
-            url: http://localhost:8096/ws-authenticator
-            username: wsEmail
-            password: ws3m41l*
+            url: http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8096/ws-authenticator
+            username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+            password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
