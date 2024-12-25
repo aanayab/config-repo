@@ -1,15 +1,15 @@
-MYSQL_HOST: 50.18.24.43
+MYSQL_HOST: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
 spring:
   mail:
   config:
     import: eureka-conf.yml
   datasource:
     #password: o649fj9325yuhwx9
-    password: wsL0gg3rDB*
+    password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
     driver-class-name: com.mysql.cj.jdbc.Driver
     #username: y3wh6gobj769qsq7
-    username: wsLoggerDB
-    url: jdbc:mysql://${MYSQL_HOST:50.18.24.43}:3306/logger
+    username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+    url: jdbc:mysql://${MYSQL_HOST:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:3306/logger
     #url: jdbc:mysql://logger.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/logger
     hikari:
       maximum-pool-size: 5
@@ -24,6 +24,6 @@ spring:
          default:
             loggerLevel: full
          wsAuthenticator:
-            url: http://localhost:8096/ws-authenticator
-            username: wsLogger
-            password: wsL0gg3r*
+            url: http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8096/ws-authenticator
+            username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+            password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
