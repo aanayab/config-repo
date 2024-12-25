@@ -22,10 +22,10 @@ rabbitmq:
       exchange-topic: ws.logger.email.topic
       queue: ws.logger.email.emailLogger
     virtual-host: com.boyertech.logger  # Si tienes un virtual host configurado
-    password: wsL0gg3r*
+    password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
     port: '5671'
-    host: ${RABBIT_URI:rabbit-dev.boyertech.mx}
-    username: wsLoggerPb
+    host: ${RABBIT_URI:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}
+    username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
     ssl:
     #   enabled: true
       algorithm: TLSv1.2
