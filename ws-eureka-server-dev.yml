@@ -41,29 +41,29 @@ rabbitmq:
       exchange-topic: ws.logger.topic
       queue: ws.logger.requestLogger 
       virtual-host: com.boyertech.logger  # Si tienes un virtual host configurado
-      password: wsL0gg3r*
+      password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
       port: '5671'
-      host: ${RABBIT_URI:rabbit-dev.boyertech.mx}
-      username: wsLoggerPb
+      host: ${RABBIT_URI:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}
+      username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
       ssl:
      #   enabled: true
         algorithm: TLSv1.2
         key-store: /mykeystore.jks  # Si usas un keystore
 #        key-store: classpath:mykeystore.jks  # Si usas un keystore
-        key-store-password: wsL0gg3r*
+        key-store-password: ENC(wsL0gg3r*)
         trust-store: /mytruststore.jks  # Si usas un truststore
 #        trust-store: classpath:mytruststore.jks  # Si usas un truststore
-        trust-store-password: wsL0gg3r*  
+        trust-store-password: ENC(wsL0gg3r*)  
 spring:
   config:
     import: eureka-conf-dev.yml
   datasource:
     #password: o649fj9325yuhwx9
-    password: ws4uth3nt1c4t0rDB*
+    password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
     driver-class-name: com.mysql.cj.jdbc.Driver
     #username: y3wh6gobj769qsq7
-    username: wsAuthenticatorDB
-    url: jdbc:mysql://${MYSQL_HOST:bd-dev.boyertech.mx}:3306/authentication
+    username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+    url: jdbc:mysql://${MYSQL_HOST:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:3306/authentication
     #url: jdbc:mysql://authentication.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/authentication
     hikari:
       maximum-pool-size: 5
