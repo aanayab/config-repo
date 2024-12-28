@@ -12,7 +12,7 @@ eureka:
       enabled: true
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):ENC(Uxqp1U8XrvvVzErY2P4ytQ==)@ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8761/ws-eureka-server/eureka}
+      defaultZone: ${EUREKA_URI:ENC(aV4p0exBi2ORJAeTudT3x/Kgw4JxTR+yJe2aM7LSGxDchENAx36YDKOCIsi+ofnJf5oGfakZYxqh06lHSetbm7PI0LKEzzHn535AGbZHqxnsrXFuN7MeYL+7MQAIKM7Ym50/9JVkMqMQBJQFrOunSVu8QMOrBYvldk3C8RjUB2E=)}
   instance:
     healthCheckUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
     sstatusPageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/info
@@ -21,15 +21,15 @@ eureka:
     #secure-health-check-url: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
 #    hostname: ${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
     preferIpAddress: true
-    ip-address: ${IP:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}
+    ip-address: ${IP:ENC(S9dJgrDjLXrzew2wBzVqVs82+zsEDAKd8+mguXnb4MYIJfLqBpmaMIIZEaBfSKEgiZZjqGqmxscDGlfm8ACvRA==)}
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 10
     metadata-map:
       startup: ${random.int}    #needed to trigger info and endpoint update after restart
-      homePageUrl: ${IP:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
-      managementUrl: ${IP:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
-      healthCheckUrl: ${IP:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
-      documentationUrl: ${IP:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
+      homePageUrl: ${IP:ENC(S9dJgrDjLXrzew2wBzVqVs82+zsEDAKd8+mguXnb4MYIJfLqBpmaMIIZEaBfSKEgiZZjqGqmxscDGlfm8ACvRA==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
+      managementUrl: ${IP:ENC(S9dJgrDjLXrzew2wBzVqVs82+zsEDAKd8+mguXnb4MYIJfLqBpmaMIIZEaBfSKEgiZZjqGqmxscDGlfm8ACvRA==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
+      healthCheckUrl: ${IP:ENC(S9dJgrDjLXrzew2wBzVqVs82+zsEDAKd8+mguXnb4MYIJfLqBpmaMIIZEaBfSKEgiZZjqGqmxscDGlfm8ACvRA==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
+      documentationUrl: ${IP:ENC(S9dJgrDjLXrzew2wBzVqVs82+zsEDAKd8+mguXnb4MYIJfLqBpmaMIIZEaBfSKEgiZZjqGqmxscDGlfm8ACvRA==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
       version: ${info.application.version}
       management:
         context-path: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
