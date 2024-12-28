@@ -2,7 +2,7 @@ MYSQL_HOST: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
 spring:
   mail:
   config:
-    import: eureka-conf.yml
+    import: auth-conf.yml,eureka-conf.yml
   datasource:
     #password: o649fj9325yuhwx9
     password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
