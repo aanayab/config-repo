@@ -12,7 +12,7 @@ spring:
     password: ENC(Wgz9StVUQ63DLIHJeMFyHaElIk8HA9eQtOuoJTWx2xapfN6ImJ2Wxo20ttAi+RttXiXaBso+our584vVT1Y98kHyROcORiHJnsuOHt890mc=)
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ENC(ZA6usJeV/dFl68E+9q4h6OxlTA3teranomT53KT+vEPhLVbCaDK+UFSAXx+00W8z)
-    url: ${BD_URL:ENC(+ukCAoQ7KIqI/gUQqRuat0s2HiWNga7/u83F51qpMG6mA5nRweYofs+t3wf2fQR8uEkbIt6dgl7wf0vcphB96nnVGrEb5+0pq24q5Xw/vOU=)}
+    url: ${BD_URL:ENC(jlny626rkz6sk15tCZXLCzHRXRyCFNUmOspOO3QCjKkUhjrxKPUcHY1CxDxf/hz3HaVBmQOxn+6KmNbkSllujI6s0hmexm6QamHkz5ijHqs=)}
     hikari:
       maximum-pool-size: 5
  jpa:
