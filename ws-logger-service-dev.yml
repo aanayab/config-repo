@@ -1,6 +1,3 @@
-jasypt:
-  encryptor:
-    password: 2482921E042662A39E3632366695EA66*
 logging:
   config: classpath:logback-dev.xml
 server:
