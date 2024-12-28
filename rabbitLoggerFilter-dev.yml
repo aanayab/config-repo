@@ -22,19 +22,19 @@ rabbitmq:
       exchange-topic: ws.logger.email.topic
       queue: ws.logger.email.emailLogger
     virtual-host: com.boyertech.logger  # Si tienes un virtual host configurado
-    password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-    port: '5671'
-    host: ${RABBIT_URI:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}
-    username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+    password: ENC(6+0Pa8hpp6qI0xgCbVnXEQDZC0aVkrsXZq5UTHkgvsGnXS98OK6uAl7OKbb17BJXy3RfUk0oW3+EMys6ripiAnDvwLe22QIVQKtuI5Fhdrc=)
+    port: '65471'
+    host: ENC(5TnXrhGOB3aBxMWEQeZ3pENXIpKHWc8b2b7NKztnBP5r8jK9z0mBsqGnJHwWLD03Rjg4ECO0xWkcbCenfbhatA==)
+    username: ENC(Dva+5B00EAsunjGuJu6P2BzpunTsNL4JDb3CzPGcn4AE+YXf/sqyRvJhpUOWfKRT)
     ssl:
     #   enabled: true
       algorithm: TLSv1.2
       key-store: /mykeystore.jks  # Si usas un keystore
 #      key-store: classpath:mykeystore.jks  # Si usas un keystore
-      key-store-password: wsL0gg3r*
+      key-store-password: ENC(FuToohv2ew20ncW+Rr/RrpGb7sPfxPw0I/EhKSw3PmgE+b02D0p1SD32F27WsjGf)
       trust-store: /mytruststore.jks  # Si usas un truststore
 #      trust-store: classpath:mytruststore.jks  # Si usas un truststore
-      trust-store-password: wsL0gg3r*     
+      trust-store-password: ENC(FuToohv2ew20ncW+Rr/RrpGb7sPfxPw0I/EhKSw3PmgE+b02D0p1SD32F27WsjGf)
  #rabbitmq:
  #   password: wsL0gg3r*
 #    port: '5671'
