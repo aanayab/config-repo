@@ -1,29 +1,62 @@
-MYSQL_HOST: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+jasypt:
+  encryptor:
+    password: 2482921E042662A39E3632366695EA66*
+logging:
+  config: classpath:logback-dev.xml
+server:
+  servlet:
+    context-path: /ws-logger-service
+  port: ${PORT:0}
 spring:
-  mail:
-  config:
-    import: auth-conf.yml,eureka-conf.yml
-  datasource:
-    #password: o649fj9325yuhwx9
-    password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+ config:
+    import: auth-conf-dev.yml,eureka-conf-dev.yml,rabbitLoggerFilter-dev.yml
+ mail:
+ datasource:
+    password: ENC(Wgz9StVUQ63DLIHJeMFyHaElIk8HA9eQtOuoJTWx2xapfN6ImJ2Wxo20ttAi+RttXiXaBso+our584vVT1Y98kHyROcORiHJnsuOHt890mc=)
     driver-class-name: com.mysql.cj.jdbc.Driver
-    #username: y3wh6gobj769qsq7
-    username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-    url: jdbc:mysql://${MYSQL_HOST:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:3306/logger
-    #url: jdbc:mysql://logger.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/logger
+    username: ENC(ZA6usJeV/dFl68E+9q4h6OxlTA3teranomT53KT+vEPhLVbCaDK+UFSAXx+00W8z)
+    url: ${BD_URL:ENC(+ukCAoQ7KIqI/gUQqRuat0s2HiWNga7/u83F51qpMG6mA5nRweYofs+t3wf2fQR8uEkbIt6dgl7wf0vcphB96nnVGrEb5+0pq24q5Xw/vOU=)}
     hikari:
       maximum-pool-size: 5
-  jpa:
+ jpa:
     hibernate:
       ddl-auto: validate
     show-sql: 'true'
-  cloud:
+ cloud:
     openfeign:
       client:
         config:
          default:
             loggerLevel: full
          wsAuthenticator:
-            url: http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8096/ws-authenticator
-            username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-            password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+            url: ENC(SB35wzleWcSKpy7Fl7+xGFwbbakNJyeVddL9AvkAHuvy2Y3gDvSlDuFkB8TvLnHFl8jfyv+5ysN4jX/aD1jgyEk+vtjCeTEl0Aj/fn19364QyrutUueIcyQlg6lmcon9)
+            username: ENC(foINhruZ9GaXhnYU44uo55//vIsCb8eyLkmP17S7qxLxyCuEPSYFf6dHBQ0gdWIJ)
+            password: ENC(gxuN6FjDneJ1YopqgxldRZ84vhT81rfyunMyWbNYL1AzwM0b/uZlALRDHMfK6wnIkZYLdHxTaPn/t7UGzhFqkQ==)
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    shutdown:
+      enabled: true
+    pause:
+      enabled: true
+    restart:
+      enabled: true
+    refresh:
+      enabled: true
+  info:
+    env:
+      enabled: true
+    build:
+      enabled: true
+    git:
+      enabled: true
+    java:
+      enabled: true
+    os:
+      enabled: true   
+  endpoints:
+    web:
+      exposure:
+        include: '*'
