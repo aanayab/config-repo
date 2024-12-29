@@ -1,32 +1,60 @@
-MYSQL_HOST: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+logging:
+  config: classpath:logback-dev.xml
+server:
+  servlet:
+    context-path: /ws-authenticator
+  port: ${PORT:0}
 spring:
-  config:
-    import: eureka-conf.yml,rabbitLoggerFilter-dev.yml
- # application:
-  #  name: ws-authenticator
-  datasource:
-    #password: o649fj9325yuhwx9
-    password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+ config:
+    import: auth-conf-dev.yml,eureka-conf-dev.yml,rabbitLoggerFilter-dev.yml
+ datasource:
+    password: ENC(b82YNrYgsYab/EsIu4vE+6FccJXc6dBjybk4zNRbjdxsIYl1CxljAaqQvggEZA5ZMuTdEP6YAvnVQpf9YvF66yLERgtRxbaIpL5IxZRUSsI=)
     driver-class-name: com.mysql.cj.jdbc.Driver
-    #username: y3wh6gobj769qsq7
-    username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-    url: jdbc:mysql://${MYSQL_HOST:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:3306/authentication
-    #url: jdbc:mysql://authentication.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/authentication
+    username: ENC(3kODF/p6KlKdKdUujYcfXG5B0ZHOy1OHTiAd0oQoXO/xK5FMLJgidivvW9SU9K/m+R7Q/QoPu1DWIO+Rk8D6dw==)
+    url: ${BD_URL:ENC(0vYoGJ1oj3wA1yqcgXAaoVAFpTyWS/Hri9rnzSAq21qR8LFyBCbFByUqeXYMgiztQ9qAOaX0ARQ+s++izwn5xC1GKzrkrmV3SIhQm62y/kUPbl6neX9Kq/BpacHqM2SQ)}
     hikari:
       maximum-pool-size: 5
-  jpa:
+ jpa:
     hibernate:
       ddl-auto: validate
     show-sql: 'true'
-  cloud:
+ cloud:
     openfeign:
       client:
         config:
           default:
             loggerLevel: full
           wsEmail:
-            url: http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8096/ws-email
+            url: ENC(gaSzZlqClrdH5SDmXhnzT/xL08dr79eoevBdDY99qRd2N88xo/A8OeAPcPPYbAk6aFRJKnQIdS1UCbybw8gMEVn1HP64dMJGBU2XEwe8oJA=)
           wsAuthenticator:
-            url: http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8096/ws-authenticator
-            username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-            password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+            url: ENC(SB35wzleWcSKpy7Fl7+xGFwbbakNJyeVddL9AvkAHuvy2Y3gDvSlDuFkB8TvLnHFl8jfyv+5ysN4jX/aD1jgyEk+vtjCeTEl0Aj/fn19364QyrutUueIcyQlg6lmcon9)
+            username: ENC(foINhruZ9GaXhnYU44uo55//vIsCb8eyLkmP17S7qxLxyCuEPSYFf6dHBQ0gdWIJ)
+            password: ENC(gxuN6FjDneJ1YopqgxldRZ84vhT81rfyunMyWbNYL1AzwM0b/uZlALRDHMfK6wnIkZYLdHxTaPn/t7UGzhFqkQ==)
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    shutdown:
+      enabled: true
+    pause:
+      enabled: true
+    restart:
+      enabled: true
+    refresh:
+      enabled: true
+  info:
+    env:
+      enabled: true
+    build:
+      enabled: true
+    git:
+      enabled: true
+    java:
+      enabled: true
+    os:
+      enabled: true   
+  endpoints:
+    web:
+      exposure:
+        include: '*'
