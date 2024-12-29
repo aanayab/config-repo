@@ -31,40 +31,15 @@ management:
   endpoints:
     web:
       exposure:
-        include: '*'
-rabbitmq:
-  logger:
-    filter:
-      enabled: false
-      exchange-fanout: ws.logger.fanout
-      exchange-direct: ws.logger.direct
-      exchange-topic: ws.logger.topic
-      queue: ws.logger.requestLogger 
-      virtual-host: com.boyertech.logger  # Si tienes un virtual host configurado
-      password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-      port: '5671'
-      host: ${RABBIT_URI:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}
-      username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-      ssl:
-     #   enabled: true
-        algorithm: TLSv1.2
-        key-store: /mykeystore.jks  # Si usas un keystore
-#        key-store: classpath:mykeystore.jks  # Si usas un keystore
-        key-store-password: ENC(wsL0gg3r*)
-        trust-store: /mytruststore.jks  # Si usas un truststore
-#        trust-store: classpath:mytruststore.jks  # Si usas un truststore
-        trust-store-password: ENC(wsL0gg3r*)  
+        include: '*' 
 spring:
   config:
     import: eureka-conf-dev.yml
   datasource:
-    #password: o649fj9325yuhwx9
-    password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+    password: ENC(2KDnq5WyTuO9tWVs/U3l2yzRqDrG6c9B1eS+CQcdo4a1DFfXc71rdwXf/QBqJ5BnfZxeMgbw7MBqitnlIGgbZ2NJ4aZb36lXVefzHyI3B+M=)
     driver-class-name: com.mysql.cj.jdbc.Driver
-    #username: y3wh6gobj769qsq7
-    username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-    url: jdbc:mysql://${MYSQL_HOST:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:3306/authentication
-    #url: jdbc:mysql://authentication.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/authentication
+    username: ENC(TTVBGypS2cXId/I4K7vJA1w7CN987/SUYSX6iRYPe2821fUtW0OnhLAhlPRaulvQmMvMUrwnEYPqxvkNzVs0MQ==)
+    url: ${BD_URL:ENC(sZ/C++k57YTYOgxjRxs2iukcoO+KbE9oTbSGMPOrWff/54g3lFsBkqs4XLbs9EBFpra/UyKD97OwZCC6KArPalEJGkSX0L0bVY1eKLlM/HWC96LAmB/EHWnDoZ21ewCl)}
     hikari:
       maximum-pool-size: 5
   jpa:
