@@ -23,7 +23,7 @@ rabbitmq:
       queue: ws.logger.email.emailLogger
     virtual-host: com.boyertech.logger  # Si tienes un virtual host configurado
     password: ENC(6+0Pa8hpp6qI0xgCbVnXEQDZC0aVkrsXZq5UTHkgvsGnXS98OK6uAl7OKbb17BJXy3RfUk0oW3+EMys6ripiAnDvwLe22QIVQKtuI5Fhdrc=)
-    port: '65471'
+    port: '65472'
     host: ENC(5TnXrhGOB3aBxMWEQeZ3pENXIpKHWc8b2b7NKztnBP5r8jK9z0mBsqGnJHwWLD03Rjg4ECO0xWkcbCenfbhatA==)
     username: ENC(Dva+5B00EAsunjGuJu6P2BzpunTsNL4JDb3CzPGcn4AE+YXf/sqyRvJhpUOWfKRT)
     ssl:
