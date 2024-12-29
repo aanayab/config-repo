@@ -1,30 +1,56 @@
-MYSQL_HOST: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+server:
+  servlet:
+    context-path: /ws-sysAdmin
+  port: ${PORT:0}
 spring:
-  config:
-    import: eureka-conf.yml,rabbitLoggerFilter-dev.yml
-  datasource:
-    #password: o649fj9325yuhwx9
-    password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
+ config:
+    import: auth-conf-dev.yml,eureka-conf-dev.yml,rabbitLoggerFilter-dev.yml
+ datasource:
+    password: ENC(JkwWZlN4pOnilDgyGrW7fIdltvyDZguYdXq9GfVvvOiDLI0uJ4pxPE1NdFWJrfggXdFkzSQyPN/LjrEnFw8x2mWnRToJ5FrW2pvPi+DMBoc=)
     driver-class-name: com.mysql.cj.jdbc.Driver
-    #username: y3wh6gobj769qsq7
-    username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-    url: jdbc:mysql://${MYSQL_HOST:ENC(Uxqp1U8XrvvVzErY2P4ytQ==)}:3306/sys_admin
-    #url: jdbc:mysql://sysadmin.cdwuqk40emj5.us-west-1.rds.amazonaws.com:3306/sys_admin
+    username: ENC(fbJkV9eSH6AwPKv8RRLjS013EwT2KI0cned2awq5NGyewjHv5thkBsoEriDy4ZIY)
+    url: ${BD_URL:ENC(oyFbbedt/5IbYkSmgxssgpx2qSn++a8y17xmGD+i6dNt8tRj9U5tDVBmHjop3cCR5nFjbyKi2LBZ5b8SRbCXOaeP3hguLAscJaEIOoiDnaOXCi2g63pFBmnr6+np9rF0)}
     hikari:
       maximum-pool-size: 5
-  jpa:
+ jpa:
     hibernate:
       ddl-auto: validate
     show-sql: 'true'
-  cloud:
+ cloud:
     openfeign:
       client:
         config:
          default:
             loggerLevel: full
          wsAuthenticator:
-            url: http://ENC(Uxqp1U8XrvvVzErY2P4ytQ==):8096/ws-authenticator
-            username: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-            password: ENC(Uxqp1U8XrvvVzErY2P4ytQ==)
-logging:
-  config: classpath:logback-dev.xml
+            url: ENC(SB35wzleWcSKpy7Fl7+xGFwbbakNJyeVddL9AvkAHuvy2Y3gDvSlDuFkB8TvLnHFl8jfyv+5ysN4jX/aD1jgyEk+vtjCeTEl0Aj/fn19364QyrutUueIcyQlg6lmcon9)
+            username: ENC(+UnE9VgdqsOU8tE4bmbHAx/iJ2w1SjqLlfCkdBJQX+soO8fya+KdyCJ0pOnKGDqP)
+            password: ENC(Gh6W9/a6Ek48NEQUM/BnU4G/Sy4wRH1+Y2G8UiLnB8BIwlgkVROTRVSBZxqxdEzMbfpnh4fF3zwMyLqttcp/5g==)
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    shutdown:
+      enabled: true
+    pause:
+      enabled: true
+    restart:
+      enabled: true
+    refresh:
+      enabled: true
+  info:
+    env:
+      enabled: true
+    build:
+      enabled: true
+    git:
+      enabled: true
+    java:
+      enabled: true
+    os:
+      enabled: true   
+  endpoints:
+    web:
+      exposure:
+        include: '*'
