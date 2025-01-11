@@ -15,23 +15,23 @@ eureka:
       defaultZone: ${EUREKA_URI:ENC(aV4p0exBi2ORJAeTudT3x/Kgw4JxTR+yJe2aM7LSGxDchENAx36YDKOCIsi+ofnJf5oGfakZYxqh06lHSetbm7PI0LKEzzHn535AGbZHqxnsrXFuN7MeYL+7MQAIKM7Ym50/9JVkMqMQBJQFrOunSVu8QMOrBYvldk3C8RjUB2E=)}
   instance:
     healthCheckUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
-    sstatusPageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/info
+    statusPageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/info
     homePageUrl: ${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
     homePageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
     #secure-health-check-url: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
 #    hostname: ${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
     preferIpAddress: true
-    ip-address: ${IP:ENC(S9dJgrDjLXrzew2wBzVqVs82+zsEDAKd8+mguXnb4MYIJfLqBpmaMIIZEaBfSKEgiZZjqGqmxscDGlfm8ACvRA==)}
+    ip-address: ${IP:api-dev.boyertech.mx}
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 10
     metadata-map:
       startup: ${random.int}    #needed to trigger info and endpoint update after restart
-      homePageUrl: ${IP:ENC(S9dJgrDjLXrzew2wBzVqVs82+zsEDAKd8+mguXnb4MYIJfLqBpmaMIIZEaBfSKEgiZZjqGqmxscDGlfm8ACvRA==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
-      managementUrl: ${IP:ENC(S9dJgrDjLXrzew2wBzVqVs82+zsEDAKd8+mguXnb4MYIJfLqBpmaMIIZEaBfSKEgiZZjqGqmxscDGlfm8ACvRA==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
-      healthCheckUrl: ${IP:ENC(S9dJgrDjLXrzew2wBzVqVs82+zsEDAKd8+mguXnb4MYIJfLqBpmaMIIZEaBfSKEgiZZjqGqmxscDGlfm8ACvRA==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
-      documentationUrl: ${IP:ENC(S9dJgrDjLXrzew2wBzVqVs82+zsEDAKd8+mguXnb4MYIJfLqBpmaMIIZEaBfSKEgiZZjqGqmxscDGlfm8ACvRA==)}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
+      homePageUrl: ${IP:http://api-dev.boyertech.mx}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
+      managementUrl: ${IP:http://api-dev.boyertech.mx}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
+      healthCheckUrl: ${IP:http://api-dev.boyertech.mx}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
+      documentationUrl: ${IP:http://api-dev.boyertech.mx}:${server.port}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
       version: ${info.application.version}
       management:
-        context-path: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
+        context-path:  ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator
 #        port: ${management.port}
     instanceId: ${spring.application.name}:${non-secure-port:${server.port}}:${spring.application.instance_id:${random.value}}
