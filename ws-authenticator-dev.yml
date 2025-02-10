@@ -25,9 +25,9 @@ spring:
           default:
             loggerLevel: full
           wsEmail:
-            url: ENC(gaSzZlqClrdH5SDmXhnzT/xL08dr79eoevBdDY99qRd2N88xo/A8OeAPcPPYbAk6aFRJKnQIdS1UCbybw8gMEVn1HP64dMJGBU2XEwe8oJA=)
+            url: http://api-dev.boyertech.mx/ws-email
           wsAuthenticator:
-            url: ENC(SB35wzleWcSKpy7Fl7+xGFwbbakNJyeVddL9AvkAHuvy2Y3gDvSlDuFkB8TvLnHFl8jfyv+5ysN4jX/aD1jgyEk+vtjCeTEl0Aj/fn19364QyrutUueIcyQlg6lmcon9)
+            url: http://api-dev.boyertech.mx/ws-authenticator
             username: ENC(foINhruZ9GaXhnYU44uo55//vIsCb8eyLkmP17S7qxLxyCuEPSYFf6dHBQ0gdWIJ)
             password: ENC(gxuN6FjDneJ1YopqgxldRZ84vhT81rfyunMyWbNYL1AzwM0b/uZlALRDHMfK6wnIkZYLdHxTaPn/t7UGzhFqkQ==)
 management:
