@@ -6,7 +6,7 @@ server:
   port: ${PORT:8096}
 spring:
  config:
-    import: eureka-conf-dev.yml,enpoints.yml
+    import: eureka-conf-dev.yml,enpoints.yml,rabbitLoggerFilter-dev.yml
  main:
     web-application-type: REACTIVE
 management:
