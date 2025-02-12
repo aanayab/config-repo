@@ -37,7 +37,7 @@ management:
         include: '*'
 spring:
  config:
-   import: eureka-conf-dev.yml
+   import: eureka-conf-dev.yml,rabbitLoggerFilter-dev.yml
  datasource:
    password: ENC(2KDnq5WyTuO9tWVs/U3l2yzRqDrG6c9B1eS+CQcdo4a1DFfXc71rdwXf/QBqJ5BnfZxeMgbw7MBqitnlIGgbZ2NJ4aZb36lXVefzHyI3B+M=)
    driver-class-name: com.mysql.cj.jdbc.Driver
