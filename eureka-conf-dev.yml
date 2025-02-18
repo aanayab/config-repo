@@ -1,7 +1,8 @@
 eureka:
   server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 60000
     waitTimeInMsWhenSyncEmpty: 0
-    enableSelfPreservation: true
   datacenter: BOYERTECH
   environment: ${spring.profiles.active}
   client:
@@ -14,6 +15,8 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URI:ENC(aV4p0exBi2ORJAeTudT3x/Kgw4JxTR+yJe2aM7LSGxDchENAx36YDKOCIsi+ofnJf5oGfakZYxqh06lHSetbm7PI0LKEzzHn535AGbZHqxnsrXFuN7MeYL+7MQAIKM7Ym50/9JVkMqMQBJQFrOunSVu8QMOrBYvldk3C8RjUB2E=)}
   instance:
+    lease-renewal-interval-in-seconds: 10  # Cada 10s envía un heartbeat
+    lease-expiration-duration-in-seconds: 60 # Expira después de 60s sin heartbeats
     healthCheckUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/health
     statusPageUrlPath: ${server.servlet.context-path}${spring.mvc.servlet.path:}/actuator/info
     homePageUrl: ${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
@@ -22,8 +25,6 @@ eureka:
 #    hostname: ${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
     preferIpAddress: true
     ip-address: ${IP:api-dev.boyertech.mx}
-    leaseRenewalIntervalInSeconds: 5
-    leaseExpirationDurationInSeconds: 10
     metadata-map:
       startup: ${random.int}    #needed to trigger info and endpoint update after restart
       homePageUrl: http://${IP:api-dev.boyertech.mx}${server.servlet.context-path}${spring.mvc.servlet.path:}/swagger-ui.html
