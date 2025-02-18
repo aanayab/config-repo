@@ -36,6 +36,12 @@ management:
       exposure:
         include: '*'
 spring:
+ boot:
+   admin:
+     discovery:
+       ignored-services: []  # No ignores servicios caídos
+     monitor:
+       status-interval: 10000 # Revisa el estado cada 10s
  config:
    import: eureka-conf-dev.yml,rabbitLoggerFilter-dev.yml
  datasource:
