@@ -30,6 +30,9 @@ spring:
             url: http://api-dev.boyertech.mx/ws-authenticator
             username: ENC(foINhruZ9GaXhnYU44uo55//vIsCb8eyLkmP17S7qxLxyCuEPSYFf6dHBQ0gdWIJ)
             password: ENC(gxuN6FjDneJ1YopqgxldRZ84vhT81rfyunMyWbNYL1AzwM0b/uZlALRDHMfK6wnIkZYLdHxTaPn/t7UGzhFqkQ==)
+wsEmail:
+  confirmation:
+    url: http://www.dev.boyertech.com.mx/confirmation
 management:
   endpoint:
     health:
