@@ -2,8 +2,6 @@ server:
   servlet:
     context-path: /ws-eureka-server
   port: ${PORT:8761}
-logging:
- config: classpath:logback-dev.xml
 management:
   endpoint:
     health:
