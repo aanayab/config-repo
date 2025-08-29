@@ -1,3 +1,9 @@
+aes:
+  encryptor:
+    password: z2sMFz0rk2krdScvGWQCBckrbmLpAjTa
+jasypt:
+  encryptor:
+    password: 2482921E042662A39E3632366695EA66*
 server:
   servlet:
     context-path: /ws-sysAdmin
